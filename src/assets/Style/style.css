@@ -1,0 +1,35 @@
+.upperHeader{
+    background-color: #FF9500;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 1px 0 1px 0;
+    border-radius: 5px;
+}
+.navBar{
+    width: 100%;
+    background-color: #96e313;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 5px 20px 5px 20px; */
+    overflow-y: hidden;
+    
+}
+.nav{
+    display: flex;
+}
+.navList {
+    display: flex;
+    color:#000;
+    justify-content: center;
+    
+} 
+.navList li{
+    margin-left: 20px;
+    color: #000;
+    margin-left: 20px;
+    
+
+} 
