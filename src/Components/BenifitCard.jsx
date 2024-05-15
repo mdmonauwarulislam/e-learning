@@ -1,4 +1,4 @@
-// import React from "react";
+// import React from "react"
 
 function BenifitCard(props) {
   return (
@@ -8,8 +8,8 @@ function BenifitCard(props) {
       <p className="text-gray-600">
         {props.desc}
       </p>
-      <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded-full text-right">
-        Arrow
+      <button className="mt-4 bg-gray-100 text-white p-4 rounded text-right float-right">
+      <img width="16" height="16" className="" src="https://img.icons8.com/windows/32/FF9500/up-right-arrow.png" alt="arrow"/>
       </button>
     </div>
   );

@@ -1,9 +1,10 @@
 // import React from 'react'
+import LearningImg from "../assets/Image/learning.jpg"
 
 function CourseCard() {
   return (
     <div className="bg-white p-6 rounded-lg">
-            <img src="" alt="Image" className="w-full mb-4" />
+            <img src= {LearningImg} alt="Image" className="w-full mb-4 rounded" />
             <div className="flex justify-between">
               <div className="flex space-x-3">
                 <p className="mb-2">Tag</p>
