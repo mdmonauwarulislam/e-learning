@@ -88,7 +88,7 @@ function Home() {
       {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ video section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */}
 
       <div className="bg-grayColor">
-        <div className=" flex items-center justify-center md:mt-0 mt-[-250px] mx-4 max-w-[1280px] md:mx-auto max-h-[675px]">
+        <div className=" flex items-center justify-center md:mt-0 mt-[-280px] mx-4 max-w-[1280px] md:mx-auto max-h-[675px]">
           <div
             style={{
               position: "relative",
