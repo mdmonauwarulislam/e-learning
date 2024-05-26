@@ -1,23 +1,22 @@
+/* eslint-disable react/prop-types */
 // import React from 'react'
 import LearningImg from "../assets/Image/learning.jpg"
 
-function CourseCard() {
+function CourseCard(props) {
   return (
     <div className="bg-white p-6 rounded-lg">
             <img src= {LearningImg} alt="Image" className="w-full mb-4 rounded" />
             <div className="flex justify-between">
               <div className="flex space-x-3">
-                <p className="mb-2">Tag</p>
-                <p className="mb-2">Tag</p>
+                <p className="mb-2 border px-2 rounded bg-gray-100">{props.tag1}</p>
+                <p className="mb-2 border px-2 rounded bg-gray-100">{props.tag2}</p>
               </div>
-              <p className="text-right mb-2">Author</p>
+              <p className="text-right mb-2 border px-2 rounded bg-gray-100">{props.author}</p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-2">Headline</h3>
+              <h3 className="text-xl font-semibold mb-2">{props.title}</h3>
               <p className="text-gray-600 mb-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                inventore, totam repellendus atque autem sunt ullam a iste animi
-                at illum et! Ipsum quod, rem atque adipisci dolor ea error?
+                {props.disc}
               </p>
               <button className="w-full bg-gray-100 border hover:bg-orangeBg text-black hover:text-white py-2 px-4 rounded">
                 Button
@@ -26,5 +25,5 @@ function CourseCard() {
           </div>
   )
 }
-
+ 
 export default CourseCard

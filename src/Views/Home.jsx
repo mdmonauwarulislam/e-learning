@@ -3,6 +3,8 @@ import lightIcon from "../assets/Image/lightIcon.png";
 import brandContainer from "../assets/Image/Container.png";
 import video from "../assets/Image/video.mp4";
 import BenifitCard from "../Components/BenifitCard";
+import CourseCard from "../Components/CourseCard";
+import Testinmonial from "../Components/Testinmonial";
 // import CourseCard from "../Components/CourseCard";
 // import Testinmonial from "../Components/Testinmonial";
 
@@ -19,32 +21,82 @@ function Home() {
     }
   };
   const benefitCard = [
-    { 
-      id:1,
-      title:"Flexing Learning Schedule",
+    {
+      id: 1,
+      title: "Flexing Learning Schedule",
       disc: "Fit your coursework around yout existing commitements and obligations",
     },
-    { 
-      id:2,
-      title:"Flexing Learning Schedule",
+    {
+      id: 2,
+      title: "Flexing Learning Schedule",
       disc: "Fit your coursework around yout existing commitements and obligations",
     },
-    { 
-      id:3,
-      title:"Flexing Learning Schedule",
+    {
+      id: 3,
+      title: "Flexing Learning Schedule",
       disc: "Fit your coursework around yout existing commitements and obligations",
     },
-    { 
-      id:4,
-      title:"Flexing Learning Schedule",
+    {
+      id: 4,
+      title: "Flexing Learning Schedule",
       disc: "Fit your coursework around yout existing commitements and obligations",
     },
-    { 
-      id:5,
-      title:"Flexing Learning Schedule",
+    {
+      id: 5,
+      title: "Flexing Learning Schedule",
       disc: "Fit your coursework around yout existing commitements and obligations",
     },
   ];
+
+  const courseCard = [
+    {
+      tag1: "DSA",
+      tag2: "Learning",
+      author: "Mannu",
+      title: "Flexing Learning Schedule",
+      disc: "Fit your coursework around yout existing commitements and obligations",
+    },
+    {
+      tag1: "DSA",
+      tag2: "Learning",
+      author: "Mannu",
+      title: "Flexing Learning Schedule",
+      disc: "Fit your coursework around yout existing commitements and obligations",
+    },
+    {
+      tag1: "DSA",
+      tag2: "Learning",
+      author: "Mannu",
+      title: "Flexing Learning Schedule",
+      disc: "Fit your coursework around yout existing commitements and obligations",
+    },
+    {
+      tag1: "DSA",
+      tag2: "Learning",
+      author: "Mannu",
+      title: "Flexing Learning Schedule",
+      disc: "Fit your coursework around yout existing commitements and obligations",
+    },
+  ];
+
+  const testimonial = [
+    {
+      review:"Very good coursework around yout existing commitements and obligations",
+      user:"Monauwarul"
+    },
+    {
+      review:"Very good coursework around yout existing commitements and obligations",
+      user:"Monauwarul"
+    },
+    {
+      review:"Very good coursework around yout existing commitements and obligations",
+      user:"Monauwarul"
+    },
+    {
+      review:"Very good coursework around yout existing commitements and obligations",
+      user:"Monauwarul"
+    },
+  ]
 
   return (
     <>
@@ -88,7 +140,7 @@ function Home() {
       {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ video section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */}
 
       <div className="bg-grayColor">
-        <div className=" flex items-center justify-center md:mt-0 mt-[-280px] mx-4 max-w-[1280px] md:mx-auto max-h-[675px]">
+        <div className=" flex items-center justify-center md:mt-0 mt-[-300px] mx-4 max-w-[1280px] md:mx-auto max-h-[675px]">
           <div
             style={{
               position: "relative",
@@ -128,87 +180,106 @@ function Home() {
               </button>
             </div>
           </div>
-          <div className={`md:grid md:grid-cols-3 gap-4 md:pt-12 pt-3 space-y-4 `}>
-            {benefitCard.map((item,index) => (
+          <div
+            className={`md:grid md:grid-cols-3 gap-4 md:pt-12 pt-3 space-y-4 `}
+          >
+            {benefitCard.map((item, index) => (
               <BenifitCard
                 key={index}
                 id={item.id}
                 title={item.title}
-                disc ={item.disc}
+                disc={item.disc}
               />
             ))}
           </div>
         </div>
-      </div>
-
-      <div className="flex flex-col pt-5 bg-grayColor">
-        <h3 className=" px-20 text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl font-bold ">
-          Our Courses
-        </h3>
-        <div className=" rounded-lg px-2 sm:px-16 md:mx-12 lg:mx-16 xl:mx-4 flex">
-          <div className="flex flex-col w-3/4">
-            <p className="text-sm sm:text-sm md:text-sm font-extralight  lg:text-sm xl:text-base ">
-              Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam
-              eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac
-              cum eget habitasse in velit fringilla feugiat senectus in.
-            </p>
-          </div>
-          <div className="mt-4 w-1/4 justify-end flex">
-            <button className="bg-orangeBg text-white p-2 rounded hover:bg-white hover:text-black border border-orangeBg transition duration-300 w-auto">
-              View all
-            </button>
-          </div>
-        </div>
-       
-      </div>
-
-      {/* Our Testimonial */}
-
-      <div className="flex flex-col pt-5 bg-grayColor">
-        <h3 className=" px-20 text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl font-bold ">
-          Our Testimonial
-        </h3>
-        <div className=" rounded-lg px-2 sm:px-16 md:mx-12 lg:mx-16 xl:mx-4 flex">
-          <div className="flex flex-col w-3/4">
-            <p className="text-sm sm:text-sm md:text-sm font-extralight  lg:text-sm xl:text-base ">
-              Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam
-              eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac
-              cum eget habitasse in velit fringilla feugiat senectus in.
-            </p>
-          </div>
-          <div className="mt-4 w-1/4 justify-end flex">
-            <button className="bg-orangeBg text-white p-2 rounded hover:bg-white hover:text-black border border-orangeBg transition duration-300 w-auto">
-              View all
-            </button>
-          </div>
-        </div>
-        
-      </div>
-
-      {/* pricing boxed  */}
-      <div className="flex flex-col pt-5 bg-grayColor">
-        <h3 className=" px-20 text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl font-bold ">
-          Our Pricing
-        </h3>
-        <div className=" rounded-lg px-2 sm:px-16 md:mx-12 lg:mx-16 xl:mx-4 flex">
-          <div className="flex mt-4 justify-between">
-            <p className="text-sm sm:text-sm md:text-sm font-extralight  lg:text-sm xl:text-base w-3/4">
-              Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam
-              eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac
-              cum eget habitasse in velit fringilla feugiat senectus in.
-            </p>
-            <div className=" flex space-x-2 bg-white p-2 w-auto rounded">
-              <button className="bg-orangeBg text-white p-2 rounded hover:bg-white hover:text-black border transition duration-300 w-auto">
-                Monthly
-              </button>
-              <button className="bg-white text-black p-2 rounded hover:bg-orangeBg hover:text-white border  transition duration-300 w-auto">
-                Yearly
+        {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Our Course ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
+        <div className="flex flex-col pt-5 bg-grayColor max-w-[1280px] md:mx-auto mx-4 ">
+          <h3 className="text-2xl md:text-4xl font-bold ">Our Courses</h3>
+          <div className=" rounded-lg md:flex ">
+            <div className="md:w-3/4">
+              <p className="text-[14px] md:text-[16px]">
+                Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam
+                eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et.
+                Ac cum eget habitasse in velit fringilla feugiat senectus in.
+              </p>
+            </div>
+            <div className="mt-4 w-1/4 justify-end md:flex">
+              <button className="bg-orangeBg text-white p-2 rounded hover:bg-white hover:text-black border border-orangeBg transition duration-300 w-auto">
+                View all
               </button>
             </div>
           </div>
+          <div
+            className={`md:grid md:grid-cols-3 gap-4 md:pt-12 pt-3 space-y-4 `}
+          >
+            {courseCard.map((item, index) => (
+              <CourseCard
+                key={index}
+                tag1={item.tag1}
+                tag2={item.tag2}
+                author={item.author}
+                title={item.title}
+                disc={item.disc}
+              />
+            ))}
+          </div>
         </div>
-        <div className="bg-white px-20 py-6 pt-5">
+
+        {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Our Testimonial ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
+
+        <div className="flex flex-col pt-5 bg-grayColor max-w-[1280px] md:mx-auto mx-4 ">
+          <h3 className=" text-2xl md:text-4xl font-bold ">Our Testimonial</h3>
+          <div className="rounded-lg md:flex">
+            <div className="md:w-3/4">
+              <p className="text-[14px] md:text-[16px]">
+                Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam
+                eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et.
+                Ac cum eget habitasse in velit fringilla feugiat senectus in.
+              </p>
+            </div>
+            <div className="mt-4 w-1/4 justify-end md:flex">
+              <button className="bg-orangeBg text-white p-2 rounded hover:bg-white hover:text-black border border-orangeBg transition duration-300 w-auto">
+                View all
+              </button>
+            </div>
+            </div>
+            <div className="space-y-2 mt-4">
+            {testimonial.map((item, index) => (
+              <Testinmonial
+              
+                key={index}
+                review={item.review}
+                user={item.user}
+              />
+            ))}
+            </div>
+            
+
           
+        </div>
+
+        {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ pricing boxed ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */}
+        <div className="flex flex-col pt-5 bg-grayColor max-w-[1280px] md:mx-auto mx-4 ">
+          <h3 className=" text-2xl md:text-4xl font-bold ">Our Pricing</h3>
+          <div className="rounded-lg md:flex">
+            <div className="mt-4 md:flex justify-between ">
+              <p className="text-[14px] md:text-[16px] md:w-3/4">
+                Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam
+                eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et.
+                Ac cum eget habitasse in velit fringilla feugiat senectus in.
+              </p>
+              <div className="bg-white p-2 md:w-[13%] w-1/2 mt-4 md:mt-0 rounded mb-5 flex justify-between">
+                <button className="bg-orangeBg text-white p-2 rounded hover:bg-white hover:text-black border transition duration-300 w-auto">
+                  Monthly
+                </button>
+                <button className="bg-white text-black p-2 rounded hover:bg-orangeBg hover:text-white border  transition duration-300 w-auto">
+                  Yearly
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="bg-white px-20 py-6 pt-5 h-full mb-10"></div>
         </div>
       </div>
     </>
