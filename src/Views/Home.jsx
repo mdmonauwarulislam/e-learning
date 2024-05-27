@@ -5,8 +5,8 @@ import video from "../assets/Image/video.mp4";
 import BenifitCard from "../Components/BenifitCard";
 import CourseCard from "../Components/CourseCard";
 import Testinmonial from "../Components/Testinmonial";
-// import CourseCard from "../Components/CourseCard";
-// import Testinmonial from "../Components/Testinmonial";
+import Pricing from "../Components/Pricing";
+
 
 function Home() {
   const videoRef = useRef(null);
@@ -181,7 +181,7 @@ function Home() {
             </div>
           </div>
           <div
-            className={`md:grid md:grid-cols-3 gap-4 md:pt-12 pt-3 space-y-4 `}
+            className={`md:grid md:grid-cols-3 gap-4 md:pt-12 pt-3`}
           >
             {benefitCard.map((item, index) => (
               <BenifitCard
@@ -211,7 +211,7 @@ function Home() {
             </div>
           </div>
           <div
-            className={`md:grid md:grid-cols-3 gap-4 md:pt-12 pt-3 space-y-4 `}
+            className={`md:grid md:grid-cols-2 gap-4 md:pt-12 pt-3 `}
           >
             {courseCard.map((item, index) => (
               <CourseCard
@@ -244,7 +244,7 @@ function Home() {
               </button>
             </div>
             </div>
-            <div className="space-y-2 mt-4">
+            <div className=" mt-4 md:grid md:grid-cols-2 gap-4">
             {testimonial.map((item, index) => (
               <Testinmonial
               
@@ -279,7 +279,8 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="bg-white px-20 py-6 pt-5 h-full mb-10"></div>
+          <div className="bg-white px-20 py-6 pt-5 mb-10 md:flex" ><Pricing/><Pricing/></div>
+          
         </div>
       </div>
     </>

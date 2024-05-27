@@ -17,7 +17,7 @@ function Header() {
   return (
     <header className="bg-grayColor pt-5 flex justify-center px-4">
       <div className="mx-auto w-full ">
-        <div className="bg-orangeBg text-white text-center p-2 rounded mx-auto max-w-[1280px]">
+        <div className="bg-orangeBg text-white text-center px-2 py-3 rounded mx-auto max-w-[1450px]">
           <p className="text-white">
             Free Courses 🌟 Sale Ends Soon, Get It Now
           </p>

@@ -8,7 +8,8 @@ export default {
     extend: {
       colors:{
         orangeBg:'#FF9500',
-        grayColor:'#F1F1F3'
+        grayColor:'#F1F1F3',
+        OrangeBoreder:'#FFEACC',
       }
     },
   },
