@@ -96,6 +96,83 @@ function Home() {
       review:"Very good coursework around yout existing commitements and obligations",
       user:"Monauwarul"
     },
+  ];
+
+  const pricing = [
+    {
+      title: "Free Plan",
+      price: "$0",
+      period: "/month",
+      features: [
+        {
+          isCross:true,
+          contents:"Access to selected free courses",
+        },
+        {
+          isCross:true,
+          contents:"Limited course materials and resources",
+        },
+        {
+          isCross:true,
+          contents:"Basic community support",
+        },
+        {
+          isCross:true,
+          contents:"No certification upon completion",
+        },
+        {
+          isCross:true,
+          contents:"Ad-supported platform"
+        },
+        {
+          isCross:false,
+          contents:"Access to exclusive Pro Plan community forums",
+        },
+        {
+          isCross:false,
+          contents: "Early access to new courses and updates"
+        },
+      ],
+     
+      isPro: false,
+    },
+    {
+      title: "Pro Plan",
+      price: "$79",
+      period: "/month",
+      features: [
+        {
+        isCross : true,
+        contents: "Unlimited access to all courses",
+        },
+        {
+        isCross : true,
+        contents: "Unlimited course materials and resources",
+        },
+        {
+        isCross : true,
+        contents: "Priority support from instructors",
+        },
+        {
+        isCross : true,
+        contents: "Course completion certificates",
+        },
+        {
+        isCross : true,
+        contents: "Ad-free experience"
+        },
+        {
+        isCross : true,
+        contents: "Access to exclusive Pro Plan community forums",
+        },
+        {
+        isCross : true,
+        contents:"Early access to new courses and updates"
+        }, 
+        
+      ],
+      isPro: true,
+    }
   ]
 
   return (
@@ -132,7 +209,7 @@ function Home() {
             View Pricing
           </button>
         </div>
-        <div className="mt-8 md:mt-16 justify-center items-center px-4 md:px-0 py-4 max-w-[1280px] mx-auto">
+        <div className="mt-8 md:mt-16 justify-center items-center px-4 xl:px-0 py-4 max-w-[1280px] xl:mx-auto mx-4">
           <img src={brandContainer} alt="" className="max-w-full" />
         </div>
       </div>
@@ -140,7 +217,7 @@ function Home() {
       {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ video section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */}
 
       <div className="bg-grayColor">
-        <div className=" flex items-center justify-center md:mt-0 mt-[-300px] mx-4 max-w-[1280px] md:mx-auto max-h-[675px]">
+        <div className=" flex items-center justify-center xl:mt-0 md:mt-[-300px] mt-[-600px] mx-4 max-w-[1280px] xl:mx-auto max-h-[675px]">
           <div
             style={{
               position: "relative",
@@ -164,7 +241,7 @@ function Home() {
       </div>
       <div className="bg-grayColor ">
         {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Benefit Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
-        <div className="flex flex-col pt-5 bg-grayColor max-w-[1280px] md:mx-auto mx-4 ">
+        <div className="flex flex-col xl:pt-5 pt-10 bg-grayColor max-w-[1280px] xl:mx-auto mx-4 ">
           <h3 className="text-2xl md:text-4xl font-bold ">Benefits</h3>
           <div className=" rounded-lg md:flex ">
             <div className="md:w-3/4">
@@ -181,7 +258,7 @@ function Home() {
             </div>
           </div>
           <div
-            className={`md:grid md:grid-cols-3 gap-4 md:pt-12 pt-3`}
+            className={`md:grid md:grid-cols-3 gap-4 md:pt-12 pt-3 space-y-4 md:space-y-0`}
           >
             {benefitCard.map((item, index) => (
               <BenifitCard
@@ -194,7 +271,7 @@ function Home() {
           </div>
         </div>
         {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Our Course ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
-        <div className="flex flex-col pt-5 bg-grayColor max-w-[1280px] md:mx-auto mx-4 ">
+        <div className="flex flex-col pt-5 bg-grayColor max-w-[1280px] xl:mx-auto mx-4 ">
           <h3 className="text-2xl md:text-4xl font-bold ">Our Courses</h3>
           <div className=" rounded-lg md:flex ">
             <div className="md:w-3/4">
@@ -211,7 +288,7 @@ function Home() {
             </div>
           </div>
           <div
-            className={`md:grid md:grid-cols-2 gap-4 md:pt-12 pt-3 `}
+            className={`md:grid md:grid-cols-2 gap-4 md:pt-12 pt-3 space-y-4 md:space-y-0 `}
           >
             {courseCard.map((item, index) => (
               <CourseCard
@@ -228,7 +305,7 @@ function Home() {
 
         {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Our Testimonial ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
 
-        <div className="flex flex-col pt-5 bg-grayColor max-w-[1280px] md:mx-auto mx-4 ">
+        <div className="flex flex-col pt-5 bg-grayColor max-w-[1280px] xl:mx-auto mx-4 "> 
           <h3 className=" text-2xl md:text-4xl font-bold ">Our Testimonial</h3>
           <div className="rounded-lg md:flex">
             <div className="md:w-3/4">
@@ -244,7 +321,7 @@ function Home() {
               </button>
             </div>
             </div>
-            <div className=" mt-4 md:grid md:grid-cols-2 gap-4">
+            <div className=" mt-4 md:grid md:grid-cols-2 gap-4 space-y-4 md:space-y-0">
             {testimonial.map((item, index) => (
               <Testinmonial
               
@@ -260,7 +337,7 @@ function Home() {
         </div>
 
         {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ pricing boxed ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */}
-        <div className="flex flex-col pt-5 bg-grayColor max-w-[1280px] md:mx-auto mx-4 ">
+        <div className="flex flex-col pt-5 bg-grayColor max-w-[1280px] xl:mx-auto mx-4 ">
           <h3 className=" text-2xl md:text-4xl font-bold ">Our Pricing</h3>
           <div className="rounded-lg md:flex">
             <div className="mt-4 md:flex justify-between ">
@@ -269,7 +346,7 @@ function Home() {
                 eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et.
                 Ac cum eget habitasse in velit fringilla feugiat senectus in.
               </p>
-              <div className="bg-white p-2 md:w-[13%] w-1/2 mt-4 md:mt-0 rounded mb-5 flex justify-between">
+              <div className="bg-white p-2 md:w-[20%] xl:w-[13%] w-1/2 mt-4 md:mt-0 rounded mb-5 flex justify-between">
                 <button className="bg-orangeBg text-white p-2 rounded hover:bg-white hover:text-black border transition duration-300 w-auto">
                   Monthly
                 </button>
@@ -279,7 +356,18 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="bg-white px-20 py-6 pt-5 mb-10 md:flex" ><Pricing/><Pricing/></div>
+          <div className="bg-white md:px-2 xl:px-20 lg px-4 py-6 pt-5 mb-10 md:flex rounded-xl" >
+          {pricing.map((item, index) => (
+              <Pricing
+                key={index}
+                title={item.title}
+                price={item.price}
+                period={item.period}
+                features={item.features}
+                extras = {item.extras}
+              />
+            ))}
+          </div>
           
         </div>
       </div>

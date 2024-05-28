@@ -10,8 +10,8 @@ import locationIcon from '../../assets/Image/locationIcon.png'
 function Footer() {
   return (
     <footer className="bg-gray-white text-black py-12 px-4 md:px-8 lg:px-20">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between">
-        <div className=" md:items-center md:mb-0 mb-8">
+      <div className="container mx-auto flex flex-col lg:flex-row justify-between ">
+        <div className=" md:items-center lg:mb-0 mb-8">
           <img src={logo} alt="Logo" className="h-10 w-10 mb-4 md:mb-0" />
           <div className="mt-5 space-y-3 text-center md:text-left">
             <div className="text-black flex space-x-2">
