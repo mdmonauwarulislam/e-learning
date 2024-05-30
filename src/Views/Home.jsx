@@ -6,7 +6,7 @@ import BenifitCard from "../Components/BenifitCard";
 import CourseCard from "../Components/CourseCard";
 import Testinmonial from "../Components/Testinmonial";
 import Pricing from "../Components/Pricing";
-
+import FAQ from "../Components/FAQ";
 
 function Home() {
   const videoRef = useRef(null);
@@ -81,20 +81,24 @@ function Home() {
 
   const testimonial = [
     {
-      review:"Very good coursework around yout existing commitements and obligations",
-      user:"Monauwarul"
+      review:
+        "Very good coursework around yout existing commitements and obligations",
+      user: "Monauwarul",
     },
     {
-      review:"Very good coursework around yout existing commitements and obligations",
-      user:"Monauwarul"
+      review:
+        "Very good coursework around yout existing commitements and obligations",
+      user: "Monauwarul",
     },
     {
-      review:"Very good coursework around yout existing commitements and obligations",
-      user:"Monauwarul"
+      review:
+        "Very good coursework around yout existing commitements and obligations",
+      user: "Monauwarul",
     },
     {
-      review:"Very good coursework around yout existing commitements and obligations",
-      user:"Monauwarul"
+      review:
+        "Very good coursework around yout existing commitements and obligations",
+      user: "Monauwarul",
     },
   ];
 
@@ -105,35 +109,35 @@ function Home() {
       period: "/month",
       features: [
         {
-          isCross:true,
-          contents:"Access to selected free courses",
+          isCross: true,
+          contents: "Access to selected free courses",
         },
         {
-          isCross:true,
-          contents:"Limited course materials and resources",
+          isCross: true,
+          contents: "Limited course materials and resources",
         },
         {
-          isCross:true,
-          contents:"Basic community support",
+          isCross: true,
+          contents: "Basic community support",
         },
         {
-          isCross:true,
-          contents:"No certification upon completion",
+          isCross: true,
+          contents: "No certification upon completion",
         },
         {
-          isCross:true,
-          contents:"Ad-supported platform"
+          isCross: true,
+          contents: "Ad-supported platform",
         },
         {
-          isCross:false,
-          contents:"Access to exclusive Pro Plan community forums",
+          isCross: false,
+          contents: "Access to exclusive Pro Plan community forums",
         },
         {
-          isCross:false,
-          contents: "Early access to new courses and updates"
+          isCross: false,
+          contents: "Early access to new courses and updates",
         },
       ],
-     
+
       isPro: false,
     },
     {
@@ -142,38 +146,37 @@ function Home() {
       period: "/month",
       features: [
         {
-        isCross : true,
-        contents: "Unlimited access to all courses",
+          isCross: true,
+          contents: "Unlimited access to all courses",
         },
         {
-        isCross : true,
-        contents: "Unlimited course materials and resources",
+          isCross: true,
+          contents: "Unlimited course materials and resources",
         },
         {
-        isCross : true,
-        contents: "Priority support from instructors",
+          isCross: true,
+          contents: "Priority support from instructors",
         },
         {
-        isCross : true,
-        contents: "Course completion certificates",
+          isCross: true,
+          contents: "Course completion certificates",
         },
         {
-        isCross : true,
-        contents: "Ad-free experience"
+          isCross: true,
+          contents: "Ad-free experience",
         },
         {
-        isCross : true,
-        contents: "Access to exclusive Pro Plan community forums",
+          isCross: true,
+          contents: "Access to exclusive Pro Plan community forums",
         },
         {
-        isCross : true,
-        contents:"Early access to new courses and updates"
-        }, 
-        
+          isCross: true,
+          contents: "Early access to new courses and updates",
+        },
       ],
       isPro: true,
-    }
-  ]
+    },
+  ];
 
   return (
     <>
@@ -305,7 +308,7 @@ function Home() {
 
         {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Our Testimonial ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
 
-        <div className="flex flex-col pt-5 bg-grayColor max-w-[1280px] xl:mx-auto mx-4 "> 
+        <div className="flex flex-col pt-5 bg-grayColor max-w-[1280px] xl:mx-auto mx-4 ">
           <h3 className=" text-2xl md:text-4xl font-bold ">Our Testimonial</h3>
           <div className="rounded-lg md:flex">
             <div className="md:w-3/4">
@@ -320,20 +323,12 @@ function Home() {
                 View all
               </button>
             </div>
-            </div>
-            <div className=" mt-4 md:grid md:grid-cols-2 gap-4 space-y-4 md:space-y-0">
+          </div>
+          <div className=" mt-4 md:grid md:grid-cols-2 gap-4 space-y-4 md:space-y-0">
             {testimonial.map((item, index) => (
-              <Testinmonial
-              
-                key={index}
-                review={item.review}
-                user={item.user}
-              />
+              <Testinmonial key={index} review={item.review} user={item.user} />
             ))}
-            </div>
-            
-
-          
+          </div>
         </div>
 
         {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ pricing boxed ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */}
@@ -356,19 +351,24 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="bg-white md:px-2 xl:px-20 lg px-4 py-6 pt-5 mb-10 md:flex rounded-xl" >
-          {pricing.map((item, index) => (
+          <div className="bg-white md:px-2 xl:px-20 lg px-4 py-6 pt-5 mb-10 md:flex rounded-xl">
+            {pricing.map((item, index) => (
               <Pricing
                 key={index}
                 title={item.title}
                 price={item.price}
                 period={item.period}
                 features={item.features}
-                extras = {item.extras}
+                extras={item.extras}
               />
             ))}
           </div>
-          
+        </div>
+        {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  FAQ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
+        <div className="flex flex-col pt-5 bg-grayColor max-w-[1280px] xl:mx-auto mx-4 ">
+          <div className="bg-white md:px-2 xl:px-20 lg px-4 py-6 pt-5 mb-10 md:flex rounded-xl">
+            <FAQ />
+          </div>
         </div>
       </div>
     </>
