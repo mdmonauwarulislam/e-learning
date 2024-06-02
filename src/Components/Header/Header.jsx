@@ -37,7 +37,7 @@ function Header() {
                   Home
                 </li>
               </Link>
-              <Link to="/" onClick={closeMenu}>
+              <Link to="/Course" onClick={closeMenu}>
                 <li className="hover:text-orangeBg p-2 rounded hover:bg-slate-200 mx-4 my-4 md:my-0">
                   Courses
                 </li>

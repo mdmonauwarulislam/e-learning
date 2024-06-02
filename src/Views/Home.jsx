@@ -220,7 +220,7 @@ function Home() {
       {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ video section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */}
 
       <div className="bg-grayColor">
-        <div className=" flex items-center justify-center xl:mt-0 md:mt-[-300px] mt-[-480px] mx-4 max-w-[1280px] xl:mx-auto max-h-[675px]">
+        <div className=" flex items-center justify-center xl:mt-0 md:mt-[-300px] mt-[-px] mx-4 max-w-[1280px] xl:mx-auto max-h-[675px]">
           <div
             style={{
               position: "relative",
@@ -374,5 +374,6 @@ function Home() {
     </>
   );
 }
+
 
 export default Home;

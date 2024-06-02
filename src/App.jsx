@@ -1,12 +1,12 @@
-// import React from 'react'
-import Header from './Components/Header/Header'
-import Footer from './Components/Footer/Footer'
-import { Route, Routes } from 'react-router-dom'
-import Home from './Views/Home'
-import Contact from './Views/Contact'
-import About from './Views/About'
-import Course from "./Views/Course"
 
+import React from 'react'; // Import React
+import { Routes, Route } from 'react-router-dom'; // Import Routes and Route components
+import Home from './Views/Home'; // Import Home component
+import Contact from './Views/Contact'; // Import Contact component
+import Course from './Views/Course'; // Import Course component
+import About from './Views/About'; // Import About component
+import Header from './Components/Header/Header'; // Import Header component
+import Footer from './Components/Footer/Footer'; // Import Footer component
 
 function App() {
   
