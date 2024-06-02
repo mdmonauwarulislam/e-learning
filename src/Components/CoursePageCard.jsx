@@ -1,7 +1,5 @@
 /* eslint-disable no-undef */
 
-
-
 import React from "react";
 import PropTypes from "prop-types";
 // import Image from "../assets/Image/learning.jpg";
@@ -20,7 +18,7 @@ const CoursePageCard = ({ course }) => {
           </button>
         </div>
       </div>
-      <div className="flex justify-between mt-8">
+      <div className="flex justify-between mt-8 gap-4">
         {course.images.map((imgSrc, idx) => (
           <img
             key={idx}
@@ -56,9 +54,7 @@ const CoursePageCard = ({ course }) => {
                 <h2 className="text-[32px] font-bold ">
                   {item.id < 10 ? `0${item.id}` : item.id}
                 </h2>
-                <p className="text-[14px] font-medium">
-                  {item.title}
-                </p>
+                <p className="text-[14px] font-medium">{item.title}</p>
               </div>
               {idx < course.curriculum.length - 1 && (
                 <span className=" border-gray-300 my-4 md:border-r border-b" />
@@ -72,19 +68,19 @@ const CoursePageCard = ({ course }) => {
 };
 
 CoursePageCard.propTypes = {
-    course: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-      images: PropTypes.arrayOf(PropTypes.string).isRequired,
-      tags: PropTypes.arrayOf(PropTypes.string).isRequired,
-      author: PropTypes.string.isRequired,
-      curriculum: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.number.isRequired,
-          title: PropTypes.string.isRequired,
-        })
-      ).isRequired,
-    }).isRequired,
-  };
+  course: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    images: PropTypes.arrayOf(PropTypes.string).isRequired,
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+    author: PropTypes.string.isRequired,
+    curriculum: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        title: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+  }).isRequired,
+};
 
 export default CoursePageCard;
