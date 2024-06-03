@@ -7,6 +7,7 @@ import Course from './Views/Course'; // Import Course component
 import About from './Views/About'; // Import About component
 import Header from './Components/Header/Header'; // Import Header component
 import Footer from './Components/Footer/Footer'; // Import Footer component
+import PricingPage from './Views/PricingPage';
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
         <Route path='/Contact' element={<Contact/>}/>
         <Route path='/Course' element={<Course/>}/>
         <Route path='/About' element={<About/>}/>
+        <Route path='/Pricing' element={<PricingPage/>}/>
       </Routes>
       <Footer/>
     </div>

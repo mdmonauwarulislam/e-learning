@@ -47,7 +47,7 @@ function Header() {
                   About Us
                 </li>
               </Link>
-              <Link to="/" onClick={closeMenu}>
+              <Link to="/Pricing" onClick={closeMenu}>
                 <li className="hover:text-orangeBg p-2 rounded hover:bg-slate-200 mx-4 my-4 md:my-0">
                   Pricing
                 </li>
