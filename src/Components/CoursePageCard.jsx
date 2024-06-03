@@ -24,7 +24,7 @@ const CoursePageCard = ({ course }) => {
             key={idx}
             src={imgSrc}
             alt={`image-${idx}`}
-            className="md:h-80 h-24 md:w-96 w-28 rounded-lg border border-gray-300"
+            className="md:h-80 h-24 md:w-96 w-24 rounded-lg border border-gray-300"
           />
         ))}
       </div>
