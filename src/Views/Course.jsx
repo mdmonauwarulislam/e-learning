@@ -70,7 +70,7 @@ function Course() {
             Online Courses on Design and Development
             </h3>
         </div>
-        <div className="md:w-1/2 text-[12x] md:text-[16px] md:inline md:py-4 md:pl-4 mt-2 md:mt-0">
+        <div className="md:w-1/2 text-[12x] md:text-[16px] md:inline md:py-4 md:pl-4 mt-2 md:mt-0 text-justify">
         Welcome to our online course page, where you can enhance your skills in design and development. Choose from our carefully curated selection of 10 courses designed to provide you with comprehensive knowledge and practical experience. Explore the courses below and find the perfect fit for your learning journey.
         </div>
       </div>

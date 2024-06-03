@@ -278,7 +278,7 @@ function Home() {
           <h3 className="text-2xl md:text-4xl font-bold ">Our Courses</h3>
           <div className=" rounded-lg md:flex ">
             <div className="md:w-3/4">
-              <p className="text-[14px] md:text-[16px]">
+              <p className="text-[14px] md:text-[16px] text-justify">
                 Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam
                 eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et.
                 Ac cum eget habitasse in velit fringilla feugiat senectus in.
@@ -312,7 +312,7 @@ function Home() {
           <h3 className=" text-2xl md:text-4xl font-bold ">Our Testimonial</h3>
           <div className="rounded-lg md:flex">
             <div className="md:w-3/4">
-              <p className="text-[14px] md:text-[16px]">
+              <p className="text-[14px] md:text-[16px] text-justify">
                 Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam
                 eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et.
                 Ac cum eget habitasse in velit fringilla feugiat senectus in.
@@ -336,7 +336,7 @@ function Home() {
           <h3 className=" text-2xl md:text-4xl font-bold ">Our Pricing</h3>
           <div className="rounded-lg md:flex">
             <div className="mt-4 md:flex justify-between ">
-              <p className="text-[14px] md:text-[16px] md:w-3/4">
+              <p className="text-[14px] md:text-[16px] md:w-3/4 text-justify">
                 Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam
                 eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et.
                 Ac cum eget habitasse in velit fringilla feugiat senectus in.
