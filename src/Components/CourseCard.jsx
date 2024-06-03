@@ -22,7 +22,7 @@ function CourseCard(props) {
       <div>
         <h3 className="text-xl font-semibold mb-2">{props.title}</h3>
         <p className="text-gray-600 mb-4">{props.disc}</p>
-        <button className="w-full bg-gray-100 border hover:bg-orangeBg text-black hover:text-white py-2 px-4 rounded">
+        <button className="w-full bg-gray-100 border border-orangeBg hover:bg-orangeBg text-black hover:text-white py-2 px-4 rounded">
           Button
         </button>
       </div>

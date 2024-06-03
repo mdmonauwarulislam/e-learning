@@ -14,7 +14,7 @@ function BenifitCard(props) {
       </div>
       <div>
         <div className="flex justify-end">
-          <button className="mt-4 text-white p-5 rounded border ">
+          <button className="mt-4 text-white p-5 rounded border border-orangeBg ">
             <img
               width="18"
               height="18"

@@ -16,7 +16,7 @@ function Testinmonial(props) {
             <img src={Logo} alt="" className="h-10 w-10" />
             <p className="font-medium text-sm">{props.user}</p>
           </div>
-          <button className="border px-2 rounded font-medium text-sm bg-gray-50">
+          <button className="border-orangeBg border px-2 rounded font-medium text-sm bg-gray-50">
             Read Full story
           </button>
         </div>
