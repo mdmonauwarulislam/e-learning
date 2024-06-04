@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import lightIcon from "../assets/Image/lightIcon.png";
+import { HiBolt } from "react-icons/hi2";
 import brandContainer from "../assets/Image/Container.png";
 import video from "../assets/Image/video.mp4";
 import BenifitCard from "../Components/BenifitCard";
@@ -183,13 +183,9 @@ function Home() {
       <div className="bg-grayColor block h-screen pt-8 md:pt-32">
         <div className="rounded-lg pt-8 text-center md:mx-16 lg:mx-20 xl:mx-32 ">
           <div className="w-full flex justify-center">
-            <div className="flex items-center justify-center bg-white py-2 mx-4 md:mx-10 lg:mx-16 xl:mx-16 rounded-md mb-4 border border-gray-300 md:py-5">
-              <img
-                src={lightIcon}
-                alt="Light Icon"
-                className="h-8 w-8 mr-2 bg-orange-100 p-1 rounded ml-8"
-              />
-              <h5 className="text-[16px] md:text-4xl lg:text-4xl xl:text-4xl font-semibold mr-8">
+            <div className="flex items-center justify-between bg-white py-2 mx-4 px-5 md:mx-10 lg:mx-16 xl:mx-16 rounded-md mb-4 border border-gray-300 md:py-5">
+              <HiBolt className="h-8 w-8 bg-orange-100 p-1 rounded text-center" />
+              <h5 className="text-[16px] md:text-4xl lg:text-4xl xl:text-4xl font-semibold">
                 <span className="text-orangeBg">Unlock</span> Your Creative
                 Potential
               </h5>
