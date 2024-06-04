@@ -71,11 +71,12 @@ function FAQ() {
                 <div className="p-4 border rounded-lg">
                     <p className="mb-2">{faq.answer}</p>
                     {faq.link && (
-                        <div className="flex justify-between m-4 bg-gray-200 p-4 rounded-md">
-                            <a href="#" className="">
+                        <div className="m-4 bg-gray-200 p-4 rounded-md items-center ">
+                            <a href="#" className="flex justify-between">
                                 {faq.link}
+                                <HiOutlineArrowSmallRight className="p-1 rounded text-[24px] bg-white cursor-pointer" />
                             </a>
-                            <HiOutlineArrowSmallRight className="p-1 rounded text-[24px] bg-white" />
+                           
                         </div>
                     )}
                 </div>

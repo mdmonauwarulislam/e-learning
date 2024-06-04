@@ -185,7 +185,7 @@ function Home() {
           <div className="w-full flex justify-center">
             <div className="flex items-center justify-between bg-white py-2 mx-4 px-5 md:mx-10 lg:mx-16 xl:mx-16 rounded-md mb-4 border border-gray-300 md:py-5">
               <HiBolt className="h-8 w-8 bg-orange-100 p-1 rounded text-center" />
-              <h5 className="text-[16px] md:text-4xl lg:text-4xl xl:text-4xl font-semibold">
+              <h5 className="text-[16px] md:text-4xl lg:text-4xl xl:text-4xl font-semibold ml-3">
                 <span className="text-orangeBg">Unlock</span> Your Creative
                 Potential
               </h5>
