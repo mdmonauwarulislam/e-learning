@@ -1,8 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import AboutCard from "../Components/AboutCard";
-
+///ojdijdh
 function About() {
+  const cont
   return (
     <div className="pt-16 bg-grayColor pb-4">
       <div className="md:flex justify-between max-w-[1280px] xl:mx-auto mx-4 pb-12">
@@ -18,7 +19,7 @@ function About() {
         <h3 className="md:text-[42px] text-[22px] font-semibold ">About Skillbridge</h3>
         <p className="text-[12x] md:text-[16px] md:py-3 mt-2 md:mt-0 text-justify">Our commitment to excellence has led us to achieve significant milestones along our journey. Here are some of our notable achievements</p>
       </div>
-      <div className="max-w-[1280px] xl:mx-auto mx-4 grid grid-cols-2 gap-6">
+      <div className="max-w-[1280px] xl:mx-auto mx-4 md:grid grid-cols-2 gap-6 space-y-4 md:space-y-0 mt-10">
         <AboutCard/>
         <AboutCard/>
         <AboutCard/>
