@@ -61,12 +61,16 @@ function Header() {
           </div>
           <div className={`space-x-2 font-semibold items-center flex`}>
             <>
+              <Link to = "/Signup">
               <button className="bg-white hover:bg-orangeBg p-2 rounded hover:text-white">
                 Sign Up
               </button>
+              </Link>
+              <Link to = "/Login">
               <button className="bg-orangeBg hover:bg-white p-2 rounded hover:text-black text-white">
                 Login
               </button>
+              </Link>
               <span
                 className="text-3xl cursor-pointer mx-2 md:hidden block"
                 onClick={toggleMenu}

@@ -119,10 +119,10 @@ function About() {
         ))}
       </div>
       <div className="bg-white max-w-[1280px] xl:mx-auto mx-4 mb-12 mt-20 rounded-md">
-        <div className=" flex justify-between px-16 items-center">
+        <div className=" md:flex justify-between items-center md:py-20 ">
           
-           <div className="">
-          <h2 className="text-[38px] font-semibold tracking-tight leading-tight">
+           <div className=" md:px-16 px-8 py-8 md:py-0 md:w-[75%]">
+          <h2 className="md:text-[38px] text-[28px] font-semibold leading-tight">
             <span className="text-orangeBg">Together</span>, let's shape the
             future of digital innovation
           </h2>
@@ -131,26 +131,9 @@ function About() {
             in design and development.
           </p>
         </div>
-        <div>
-          <svg
-            width="362"
-            height="250"
-            viewBox="0 0 362 323"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0.359375 346.917L120.88 226.396H241.401V105.875L361.922 226.396L241.401 346.917H0.359375Z"
-              fill="#F7F7F8"
-            />
-            <path
-              d="M0.359375 105.875L120.88 226.396V105.875H241.401L361.922 -14.6458H120.88L0.359375 105.875Z"
-              fill="#F7F7F8"
-            />
-          </svg>
-        </div>
-          <div className="w-28">
-          <button className="bg-orangeBg text-white rounded p-2 ">
+       
+          <div className=" pb-8 md:pb-0 md:px-16 px-8">
+          <button className="bg-orangeBg text-white rounded p-2 text-[15px]">
             Join Now
           </button>
           </div>

@@ -8,6 +8,7 @@ import About from './Views/About'; // Import About component
 import Header from './Components/Header/Header'; // Import Header component
 import Footer from './Components/Footer/Footer'; // Import Footer component
 import PricingPage from './Views/PricingPage';
+import Login from './Views/Login';
 
 function App() {
   
@@ -20,6 +21,7 @@ function App() {
         <Route path='/Course' element={<Course/>}/>
         <Route path='/About' element={<About/>}/>
         <Route path='/Pricing' element={<PricingPage/>}/>
+        <Route path='/Login' element={<Login/>}/>
       </Routes>
       <Footer/>
     </div>
