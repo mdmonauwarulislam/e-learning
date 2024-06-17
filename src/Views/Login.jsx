@@ -13,8 +13,8 @@ function login() {
   ];
   return (
     <div className="pt-16 bg-grayColor pb-4 ">
-      <div className="md:flex justify-between items-center max-w-[1280px] xl:mx-auto mx-4 pb-12">
-        <div className="md:w-[55%] pr-10">
+      <div className="md:flex md:flex-row sm:flex-col justify-between items-center max-w-[1280px] xl:mx-auto mx-4 pb-12">
+        <div className="md:w-[55%] pr-10 md:order-1 order-2">
           <div className="md:mr-16">
             <div className=" md:text-[42px] text-[22px] font-semibold md:pr-4">
               <h3 className="pt-4">Students Testimonials</h3>
@@ -36,8 +36,8 @@ function login() {
             <FaArrowLeft  className="p-4 border rounded-md text-[52px] bg-white"/>
             <FaArrowRight className="p-4 border rounded-md text-[52px] bg-white" />
           </div>
-        </div>
-        <div className="md:w-[45%] md:pl-10">
+        </div> 
+        <div className="md:w-[45%] md:pl-10 md:order-2 order-1">
             <LoginCard/>
         </div>
       </div>

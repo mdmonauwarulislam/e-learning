@@ -33,7 +33,7 @@ function LoginCard() {
             </div>
           </div>
           <div className="mb-4 flex items-center">
-            <input type="checkbox" id="remember" className="mr-2"/>
+            <input type="checkbox" id="remember" className="mr-2 "/>
             <label htmlFor="remember" className="text-gray-700">Remember Me</label>
           </div>
           <button
