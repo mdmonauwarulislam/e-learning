@@ -9,6 +9,7 @@ import Header from './Components/Header/Header'; // Import Header component
 import Footer from './Components/Footer/Footer'; // Import Footer component
 import PricingPage from './Views/PricingPage';
 import Login from './Views/Login';
+import Signup from './Views/Signup';
 
 function App() {
   
@@ -22,6 +23,7 @@ function App() {
         <Route path='/About' element={<About/>}/>
         <Route path='/Pricing' element={<PricingPage/>}/>
         <Route path='/Login' element={<Login/>}/>
+        <Route path='/Signup' element={<Signup/>}/>
       </Routes>
       <Footer/>
     </div>
