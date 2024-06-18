@@ -1,8 +1,9 @@
-/* eslint-disable no-undef */
+/* eslint-disable react/jsx-no-undef */
 
 import React from "react";
 import PropTypes from "prop-types";
-// import Image from "../assets/Image/learning.jpg";
+import { Link } from "react-router-dom";
+
 
 const CoursePageCard = ({ course }) => {
   return (
@@ -13,9 +14,11 @@ const CoursePageCard = ({ course }) => {
           <p className="text-[16px] md:text-[18px]">{course.description}</p>
         </div>
         <div className="md:w-1/4 justify-end md:flex mt-2">
+          <Link to = "/CourseOpen">
           <button className="bg-white p-2 rounded hover:bg-orange-500 hover:text-white border border-orange-500 transition duration-300 w-auto">
             View Course
           </button>
+          </Link>
         </div>
       </div>
       <div className="flex justify-between mt-8 gap-4">

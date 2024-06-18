@@ -10,6 +10,7 @@ import Footer from './Components/Footer/Footer'; // Import Footer component
 import PricingPage from './Views/PricingPage';
 import Login from './Views/Login';
 import Signup from './Views/Signup';
+import CourseOpen from './Views/CourseOpen';
 
 function App() {
   
@@ -20,6 +21,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/Contact' element={<Contact/>}/>
         <Route path='/Course' element={<Course/>}/>
+        <Route path='/CourseOpen' element={<CourseOpen/>}/>
         <Route path='/About' element={<About/>}/>
         <Route path='/Pricing' element={<PricingPage/>}/>
         <Route path='/Login' element={<Login/>}/>
