@@ -24,7 +24,7 @@ const ContactCard = () => {
                 First Name
               </label>
               <input
-                className="border-2 rounded-md w-full py-4 px-4 mt-3"
+                className="border-2 rounded-md w-full py-4 px-4 mt-3 outline-none"
                 id="firstName"
                 type="text"
                 placeholder="Enter First Name"
@@ -35,7 +35,7 @@ const ContactCard = () => {
                 Last Name
               </label>
               <input
-                className="border-2 rounded-md w-full py-4 px-4 mt-3 "
+                className="border-2 rounded-md w-full py-4 px-4 mt-3 outline-none"
                 id="lastName"
                 type="text"
                 placeholder="Enter Last Name"
@@ -49,7 +49,7 @@ const ContactCard = () => {
                 Email
               </label>
               <input
-                className="border-2 rounded-md w-full py-4 px-4 mt-3"
+                className="border-2 rounded-md w-full py-4 px-4 mt-3 outline-none"
                 id="email"
                 type="email"
                 placeholder="Enter your Email"
@@ -60,7 +60,7 @@ const ContactCard = () => {
                 Phone
               </label>
               <input
-                className="border-2 rounded-md w-full py-4 px-4 mt-3"
+                className="border-2 rounded-md w-full py-4 px-4 mt-3 outline-none"
                 id="phone"
                 type="text"
                 placeholder="Enter Phone Number"
@@ -73,7 +73,7 @@ const ContactCard = () => {
                 Subject
               </label>
               <input
-                className="border-2 rounded-md w-full py-4 px-4 mt-3"
+                className="border-2 rounded-md w-full py-4 px-4 mt-3 outline-none"
                 id="subject"
                 type="text"
                 placeholder="Enter your Subject"
@@ -84,7 +84,7 @@ const ContactCard = () => {
                 Message
               </label>
               <textarea
-                className=" border-2 rounded-md w-full py-4 px-4 mt-3 resize-none"
+                className=" border-2 rounded-md w-full py-4 px-4 mt-3 resize-none outline-none"
                 id="message"
                 rows="5"
                 placeholder="Enter your Message here..."
