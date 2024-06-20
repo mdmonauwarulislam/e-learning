@@ -1,7 +1,5 @@
 /* eslint-disable react/prop-types */
 
-// import React from "react"
-
 function BenifitCard(props) {
   return (
     <div className="bg-white px-6 md:px-10 rounded-lg py-10">

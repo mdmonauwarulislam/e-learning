@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
 import AboutCard from "../Components/AboutCard";
 import { IoMedal } from "react-icons/io5";
 import { FaCrown, FaUserShield } from "react-icons/fa";
@@ -63,7 +62,7 @@ function About() {
   ];
   return (
     <div className="pt-16 bg-grayColor pb-4">
-      <div className="md:flex justify-between max-w-[1280px] xl:mx-auto mx-4 pb-12">
+      <div className="md:flex justify-between items-center max-w-[1280px] xl:mx-auto mx-4 pb-12">
         <div className="md:w-1/2 md:text-[42px] text-[22px] font-semibold md:pr-4">
           <h3 className="pt-4">About Skillbridge</h3>
         </div>

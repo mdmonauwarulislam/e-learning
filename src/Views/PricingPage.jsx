@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
 import FAQ from "../Components/FAQ";
 import Pricing from "../Components/Pricing";
 
@@ -82,7 +81,7 @@ function PricingPage() {
       ];
   return (
     <div className="pt-16 bg-grayColor pb-4">
-      <div className="md:flex justify-between max-w-[1280px] xl:mx-auto mx-4 pb-12">
+      <div className="md:flex justify-between items-center max-w-[1280px] xl:mx-auto mx-4 pb-12">
         <div className="md:w-1/2 md:text-[42px] text-[22px] font-semibold md:pr-4">
           <h3 className="pt-4">Our Pricings</h3>
         </div>
@@ -111,7 +110,6 @@ function PricingPage() {
                 price={item.price}
                 period={item.period}
                 features={item.features}
-                extras={item.extras}
               />
             ))}
           </div>

@@ -1,4 +1,3 @@
-import React from "react";
 import Testinmonial from "../Components/Testinmonial";
 import LoginCard from "../Components/LoginCard";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";

@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useRef } from "react";
-import React from 'react';
 import video from "../assets/Image/video.mp4";
 import OpenCourseCard from "../Components/Header/OpenCourseCard";
 
@@ -17,6 +16,73 @@ function CourseOpen() {
       videoElement.pause();
     }
   };
+
+  const courses = [
+    {
+      part: "01",
+      intro: "Introduction to UI/UX Design",
+      lessons: [
+        {
+          title: "Understanding UI/UX Design Principles",
+          duration: "45 Minutes",
+          lessonNumber: "Lesson 01",
+        },
+        {
+          title: "Importance of User-Centered Design",
+          duration: "1 Hour",
+          lessonNumber: "Lesson 02",
+        },
+        {
+          title: "The Role of UI/UX Design in Product Development",
+          duration: "45 Minutes",
+          lessonNumber: "Lesson 03",
+        },
+      ],
+    },
+    {
+      part: "02",
+      intro: "Introduction to HTML",
+      lessons: [
+        {
+          title: "Basic HTML Structure",
+          duration: "30 Minutes",
+          lessonNumber: "Lesson 01",
+        },
+        {
+          title: "HTML Elements and Attributes",
+          duration: "45 Minutes",
+          lessonNumber: "Lesson 02",
+        },
+        {
+          title: "Creating Forms in HTML",
+          duration: "1 Hour",
+          lessonNumber: "Lesson 03",
+        },
+      ],
+    },
+    {
+      part: "02",
+      intro: "Introduction to HTML",
+      lessons: [
+        {
+          title: "Basic HTML Structure",
+          duration: "30 Minutes",
+          lessonNumber: "Lesson 01",
+        },
+        {
+          title: "HTML Elements and Attributes",
+          duration: "45 Minutes",
+          lessonNumber: "Lesson 02",
+        },
+        {
+          title: "Creating Forms in HTML",
+          duration: "1 Hour",
+          lessonNumber: "Lesson 03",
+        },
+      ],
+    },
+  ];
+
 
   return (
     <div className="pt-16 bg-grayColor pb-4">
@@ -53,8 +119,16 @@ function CourseOpen() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-2 max-w-[1280px] xl:mx-auto md:flex justify-between gap-6">
-        <OpenCourseCard/>
+      <div className="md:grid md:grid-cols-2 max-w-[1280px] xl:mx-auto gap-6 mt-10">
+      {courses.map((course, index) => (
+              <OpenCourseCard
+                key={index}
+                part={course.part}
+                intro={course.intro}
+                lessons={course.lessons}
+              
+              />
+            ))}
       </div>
       </div>
   )

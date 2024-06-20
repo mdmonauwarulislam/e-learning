@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-// import React from 'react'
 import LearningImg from "../assets/Image/learning.jpg";
 
 function CourseCard(props) {

@@ -1,9 +1,4 @@
 
-
-import React from 'react';
-
-
-
 function AboutCard(about) {
   return (
     <div className='bg-white px-8 py-8 rounded-md'>

@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-// import React from 'react'
 import Logo from "../assets/Image/Logo.png";
 
 function Testinmonial(props) {

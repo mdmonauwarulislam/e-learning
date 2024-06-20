@@ -1,5 +1,4 @@
 
-import React from "react";
 import CoursePageCard from "../Components/CoursePageCard";
 import learningImage from "../assets/Image/learning.jpg";
 
@@ -64,8 +63,8 @@ function Course() {
   ];
   return (
     <div className="pt-16 bg-grayColor pb-4">
-      <div className="md:flex justify-between max-w-[1280px] xl:mx-auto mx-4 pb-12">
-        <div className="md:w-1/2 md:text-[42px] text-[22px] font-semibold md:inline md:pr-4 ">
+      <div className="md:flex justify-between items-center max-w-[1280px] xl:mx-auto mx-4 pb-12">
+        <div className="md:w-1/2 md:text-[42px] text-[22px] font-semibold md:pr-4 ">
             <h3>
             Online Courses on Design and Development
             </h3>
