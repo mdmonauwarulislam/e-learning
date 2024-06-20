@@ -55,7 +55,6 @@ function CourseOpen() {
       </div>
       <div className="grid grid-cols-2 max-w-[1280px] xl:mx-auto md:flex justify-between gap-6">
         <OpenCourseCard/>
-        <OpenCourseCard/>
       </div>
       </div>
   )
