@@ -25,34 +25,34 @@ function Header() {
           <div className="flex items-center">
             <img src={logo} alt="" className="h-10 w-10" />
             <ul
-              className={`md:flex md:items-center text-center text-[14px] font-normal xl:text-[18px]  md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 md:opacity-100 opacity-0 top-[-400px] ${
+              className={`md:flex md:items-center text-center text-[14px] font-normal xl:text-[18px]  md:z-auto md:static absolute w-full left-0 gap-2 md:w-auto md:py-0 py-4 md:pl-0 md:opacity-100 opacity-0 top-[-400px] ${
                 menuOpen
                   ? "top-[150px] opacity-100 z-10 bg-grayBg text-xl text-center"
                   : "top-[calc(100%+20px)] opacity-0 "
               }`}
             >
               <Link to="/" onClick={closeMenu}>
-                <li className="px-3 py-2 rounded-md hover:bg-grayColor mx-4 my-4 md:my-0 ">
+                <li className="px-3 py-3 rounded-md hover:bg-grayColor ml-10 my-4 md:my-0 ">
                   Home
                 </li>
               </Link>
               <Link to="/Course" onClick={closeMenu}>
-                <li className="py-2 px-3 rounded-md hover:bg-grayColor mx-4 my-4 md:my-0">
+                <li className="py-3 px-3 rounded-md hover:bg-grayColor my-4 md:my-0">
                   Courses
                 </li>
               </Link>
               <Link to="/About" onClick={closeMenu}>
-                <li className="py-2 px-3 rounded-md hover:bg-grayColor mx-4 my-4 md:my-0">
+                <li className="py-3 px-3 rounded-md hover:bg-grayColor my-4 md:my-0">
                   About Us
                 </li>
               </Link>
               <Link to="/Pricing" onClick={closeMenu}>
-                <li className="py-2 px-3 rounded-md hover:bg-grayColor mx-4 my-4 md:my-0">
+                <li className="py-3 px-3 rounded-md hover:bg-grayColor my-4 md:my-0">
                   Pricing
                 </li>
               </Link>
               <Link to="/Contact" onClick={closeMenu}>
-                <li className="py-2 px-3 rounded-md hover:bg-grayColor mx-4 my-4 md:my-0">
+                <li className="py-3 px-3 rounded-md hover:bg-grayColor my-4 md:my-0">
                   Contact
                 </li>
               </Link>
