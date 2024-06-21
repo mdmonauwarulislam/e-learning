@@ -180,31 +180,31 @@ function Home() {
 
   return (
     <>
-      <div className="bg-grayColor block h-screen pt-8 md:pt-32">
-        <div className="rounded-lg pt-8 text-center md:mx-16 lg:mx-20 xl:mx-32 ">
+      <div className="bg-grayBg h-screen pt-8 md:pt-32 font-be-vietnam-pro">
+        <div className="pt-6 text-center">
           <div className="w-full flex justify-center">
-            <div className="flex items-center justify-between bg-white py-2 mx-4 px-5 md:mx-10 lg:mx-16 xl:mx-16 rounded-md mb-4 border border-gray-300 md:py-5">
-              <HiBolt className="h-8 w-8 bg-orange-100 p-1 rounded text-center" />
-              <h5 className="text-[16px] md:text-4xl lg:text-4xl xl:text-4xl font-semibold ml-3">
+            <div className="flex items-center justify-between bg-white py-2 px-4 rounded-md mb-4 border border-grayColor">
+              <HiBolt className="h-16 w-16 bg-orange-100 p-4 rounded text-center" />
+              <h5 className="text-[16px] md:text-[34px] lg:text-[36px] xl:text-[48px] font-semibold ml-3">
                 <span className="text-orangeBg">Unlock</span> Your Creative
                 Potential
               </h5>
             </div>
           </div>
           <div className="block md:max-w-full max-w-[280px] mx-auto">
-            <h5 className="text-xl md:text-3xl lg:text-3xl xl:text-3xl font-semibold tracking-wide">
+            <h5 className="text-[24px] md:text-[28px] lg:text-3xl xl:text-[38px] font-medium tracking-tighter mt-2">
               With Online Design and Development Courses.
             </h5>
-            <p className="text-[14px] mt-2  md:text-lg ">
+            <p className="text-[14px] md:text-[16px] xl:text-[18px] mt-3">
               Learn from Industry Experts and Enhance Your Skills.
             </p>
           </div>
         </div>
-        <div className="mt-4 flex  md:space-y-0 justify-center gap-4">
-          <button className="bg-orangeBg hover:bg-white p-2  rounded hover:text-black text-white hover:border border-gray-300 transition duration-300 w-auto">
+        <div className="mt-8 flex  md:space-y-0 justify-center gap-4 text-[14px] lg:text-[14px] xl:text-[18px] font-medium font-be-vietnam-pro">
+          <button className="bg-white hover:bg-orangeBg py-3 px-3 rounded-md hover:text-white border border-grayColor w-auto">
             Explore Courses
           </button>
-          <button className="bg-white hover:bg-orangeBg p-2 rounded hover:text-white border border-gray-300 transition duration-300 w-auto">
+          <button className="bg-white hover:bg-orangeBg py-3 px-3 rounded-md hover:text-white border border-grayColor w-auto">
             View Pricing
           </button>
         </div>
@@ -215,7 +215,7 @@ function Home() {
 
       {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ video section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */}
 
-      <div className="bg-grayColor">
+      <div className="bg-grayBg font-be-vietnam-pro">
         <div className=" flex items-center justify-center xl:mt-0 md:mt-[-300px] mt-[-480px] mx-4 max-w-[1280px] xl:mx-auto max-h-[675px]">
           <div
             style={{
@@ -238,9 +238,9 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-grayColor ">
+      <div className="bg-grayBg font-be-vietnam-pro">
         {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Benefit Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
-        <div className="flex flex-col xl:pt-5 pt-10 bg-grayColor max-w-[1280px] xl:mx-auto mx-4 ">
+        <div className="flex flex-col xl:pt-5 pt-10 bg-grayBg max-w-[1280px] xl:mx-auto mx-4 ">
           <h3 className="text-2xl md:text-4xl font-bold ">Benefits</h3>
           <div className=" rounded-lg md:flex ">
             <div className="md:w-3/4">
@@ -251,7 +251,7 @@ function Home() {
               </p>
             </div>
             <div className="mt-4 w-1/4 justify-end md:flex">
-              <button className="bg-orangeBg text-white p-2 rounded hover:bg-white hover:text-black border border-orangeBg transition duration-300 w-auto">
+              <button className="bg-orangeBg text-white p-2 rounded hover:bg-white hover:text-black border border-orangeBg w-auto">
                 View all
               </button>
             </div>
@@ -270,7 +270,7 @@ function Home() {
           </div>
         </div>
         {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Our Course ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
-        <div className="flex flex-col pt-5 bg-grayColor max-w-[1280px] xl:mx-auto mx-4 ">
+        <div className="flex flex-col pt-5 bg-grayBg max-w-[1280px] xl:mx-auto mx-4 font-be-vietnam-pro">
           <h3 className="text-2xl md:text-4xl font-bold ">Our Courses</h3>
           <div className=" rounded-lg md:flex ">
             <div className="md:w-3/4">
@@ -281,7 +281,7 @@ function Home() {
               </p>
             </div>
             <div className="mt-4 w-1/4 justify-end md:flex">
-              <button className="bg-orangeBg text-white p-2 rounded hover:bg-white hover:text-black border border-orangeBg transition duration-300 w-auto">
+              <button className="bg-orangeBg text-white p-2 rounded hover:bg-white hover:text-black border border-orangeBg w-auto">
                 View all
               </button>
             </div>
@@ -304,7 +304,7 @@ function Home() {
 
         {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Our Testimonial ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
 
-        <div className="flex flex-col pt-5 bg-grayColor max-w-[1280px] xl:mx-auto mx-4 ">
+        <div className="flex flex-col pt-5 bg-grayBg max-w-[1280px] xl:mx-auto mx-4 ">
           <h3 className=" text-2xl md:text-4xl font-bold ">Our Testimonial</h3>
           <div className="rounded-lg md:flex">
             <div className="md:w-3/4">
@@ -315,7 +315,7 @@ function Home() {
               </p>
             </div>
             <div className="mt-4 w-1/4 justify-end md:flex">
-              <button className="bg-orangeBg text-white p-2 rounded hover:bg-white hover:text-black border border-orangeBg transition duration-300 w-auto">
+              <button className="bg-orangeBg text-white p-2 rounded hover:bg-white hover:text-black border border-orangeBg w-auto">
                 View all
               </button>
             </div>
@@ -328,7 +328,7 @@ function Home() {
         </div>
 
         {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ pricing boxed ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */}
-        <div className="flex flex-col pt-5 bg-grayColor max-w-[1280px] xl:mx-auto mx-4 ">
+        <div className="flex flex-col pt-5 bg-grayBg max-w-[1280px] xl:mx-auto mx-4 font-be-vietnam-pro">
           <h3 className=" text-2xl md:text-4xl font-bold ">Our Pricing</h3>
           <div className="rounded-lg md:flex">
             <div className="mt-4 md:flex justify-between ">
@@ -338,16 +338,16 @@ function Home() {
                 Ac cum eget habitasse in velit fringilla feugiat senectus in.
               </p>
               <div className="bg-white p-2 md:w-[20%] xl:w-[13%] w-1/2 mt-4 md:mt-0 rounded mb-5 flex justify-between">
-                <button className="bg-orangeBg text-white p-2 rounded hover:bg-white hover:text-black border transition duration-300 w-auto">
+                <button className="bg-orangeBg text-white p-2 rounded hover:bg-white hover:text-black border w-auto">
                   Monthly
                 </button>
-                <button className="bg-white text-black p-2 rounded hover:bg-orangeBg hover:text-white border  transition duration-300 w-auto">
+                <button className="bg-white text-black p-2 rounded hover:bg-orangeBg hover:text-white border  w-auto">
                   Yearly
                 </button>
               </div>
             </div>
           </div>
-          <div className="bg-white md:px-2 xl:px-20 lg px-4 py-6 pt-5 mb-10 md:flex rounded-xl">
+          <div className="bg-white md:px-2 xl:px-20 lg px-4 py-6 pt-5 mb-10 md:flex rounded-xl font-be-vietnam-pro">
             {pricing.map((item, index) => (
               <Pricing
                 key={index}
@@ -361,7 +361,7 @@ function Home() {
           </div>
         </div>
         {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  FAQ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
-        <div className="flex flex-col pt-5 bg-grayColor max-w-[1280px] xl:mx-auto mx-4 ">
+        <div className="flex flex-col pt-5 bg-grayBg max-w-[1280px] xl:mx-auto mx-4 font-be-vietnam-pro">
           <div className="bg-white md:px-2 xl:px-20 lg px-4 py-6 pt-5 mb-10 md:flex rounded-xl">
             <FAQ />
           </div>

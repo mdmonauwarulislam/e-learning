@@ -14,45 +14,45 @@ function Header() {
   };
 
   return (
-    <header className="bg-grayColor pt-5 flex justify-center px-4">
+    <header className="bg-grayBg pt-5 flex justify-center px-4 font-be-vietnam-pro">
       <div className="mx-auto w-full ">
-        <div className="bg-orangeBg text-white text-center px-2 py-3 rounded mx-auto max-w-[1450px]">
-          <p className="text-white">
+        <div className="bg-orangeBg text-white text-center px-2 py-3 rounded-lg mx-auto max-w-[1400px]">
+          <p className="text-white md:text-[14px] xl:text-[18px]">
             Free Courses 🌟 Sale Ends Soon, Get It Now
           </p>
         </div>
-        <div className="bg-grayColor flex justify-between items-center py-4 max-w-[1280px] mx-auto">
+        <div className="bg-grayBg flex justify-between items-center py-4 max-w-[1280px] mx-auto">
           <div className="flex items-center">
             <img src={logo} alt="" className="h-10 w-10" />
             <ul
-              className={`md:flex md:items-center text-center  md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-out duration-300 ${
+              className={`md:flex md:items-center text-center text-[14px] font-normal xl:text-[18px]  md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 md:opacity-100 opacity-0 top-[-400px] ${
                 menuOpen
-                  ? "top-[120px] opacity-100 z-10 bg-grayColor text-xl text-center"
+                  ? "top-[150px] opacity-100 z-10 bg-grayBg text-xl text-center"
                   : "top-[calc(100%+20px)] opacity-0 "
               }`}
             >
               <Link to="/" onClick={closeMenu}>
-                <li className="hover:text-orangeBg p-2 rounded hover:bg-slate-200 mx-4 my-4 md:my-0 ">
+                <li className="px-3 py-2 rounded-md hover:bg-grayColor mx-4 my-4 md:my-0 ">
                   Home
                 </li>
               </Link>
               <Link to="/Course" onClick={closeMenu}>
-                <li className="hover:text-orangeBg p-2 rounded hover:bg-slate-200 mx-4 my-4 md:my-0">
+                <li className="py-2 px-3 rounded-md hover:bg-grayColor mx-4 my-4 md:my-0">
                   Courses
                 </li>
               </Link>
               <Link to="/About" onClick={closeMenu}>
-                <li className="hover:text-orangeBg p-2 rounded hover:bg-slate-200 mx-4 my-4 md:my-0">
+                <li className="py-2 px-3 rounded-md hover:bg-grayColor mx-4 my-4 md:my-0">
                   About Us
                 </li>
               </Link>
               <Link to="/Pricing" onClick={closeMenu}>
-                <li className="hover:text-orangeBg p-2 rounded hover:bg-slate-200 mx-4 my-4 md:my-0">
+                <li className="py-2 px-3 rounded-md hover:bg-grayColor mx-4 my-4 md:my-0">
                   Pricing
                 </li>
               </Link>
               <Link to="/Contact" onClick={closeMenu}>
-                <li className="hover:text-orangeBg p-2 rounded hover:bg-slate-200 mx-4 my-4 md:my-0">
+                <li className="py-2 px-3 rounded-md hover:bg-grayColor mx-4 my-4 md:my-0">
                   Contact
                 </li>
               </Link>
@@ -61,17 +61,17 @@ function Header() {
           <div className={`space-x-2 font-semibold items-center flex`}>
             <>
               <Link to = "/Signup">
-              <button className="bg-white hover:bg-orangeBg p-2 rounded hover:text-white">
+              <button className="bg-white hover:bg-orangeBg py-2 px-3 rounded hover:text-white">
                 Sign Up
               </button>
               </Link>
               <Link to = "/Login">
-              <button className="bg-orangeBg hover:bg-white p-2 rounded hover:text-black text-white">
+              <button className="bg-white hover:bg-orangeBg py-2 px-3 rounded hover:text-white">
                 Login
               </button>
               </Link>
               <span
-                className="text-3xl cursor-pointer mx-2 md:hidden block"
+                className="text-4xl cursor-pointer mx-2 md:hidden block"
                 onClick={toggleMenu}
               >
                 <ion-icon
@@ -81,7 +81,9 @@ function Header() {
             </>
           </div>
         </div>
+        <div className=" mx-auto max-w-[1450px] border-b-2 border-grayColor"></div>
       </div>
+      
     </header>
   );
 }
