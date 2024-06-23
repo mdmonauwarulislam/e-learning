@@ -216,13 +216,13 @@ function Home() {
       {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ video section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */}
 
       <div className="bg-grayBg font-be-vietnam-pro">
-        <div className=" flex items-center justify-center xl:mt-0 md:mt-[-300px] mt-[-480px] mx-4 max-w-[1280px] xl:mx-auto max-h-[675px]">
+        <div className=" flex items-center justify-center xl:mt-0 md:mt-[-300px] mt-[-480px] mx-4 max-w-[1280px] xl:mx-auto">
           <div
             style={{
               position: "relative",
               width: "100%",
-              maxWidth: "1100px",
-              maxHeight: "675px",
+              maxWidth: "1280px",
+              maxHeight: "480px",
               margin: "auto",
             }}
           >
@@ -238,19 +238,20 @@ function Home() {
           </div>
         </div>
       </div>
+      {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Benefit Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
       <div className="bg-grayBg font-be-vietnam-pro">
-        {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Benefit Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
-        <div className="flex flex-col xl:pt-5 pt-10 bg-grayBg max-w-[1280px] xl:mx-auto mx-4 ">
-          <h3 className="text-2xl md:text-4xl font-bold ">Benefits</h3>
-          <div className=" rounded-lg md:flex ">
+        
+        <div className="flex flex-col xl:pt-80 md:pt-36 pt-10 bg-grayBg max-w-[1280px] xl:mx-auto mx-4 ">
+          <h3 className="text-[28px] md:text-[38px] xl:text-[48px] font-semibold font-be-vietnam-pro ">Benefits</h3>
+          <div className="md:flex">
             <div className="md:w-3/4">
-              <p className="text-[14px] md:text-[16px]">
+              <p className="text-[14px] md:text-[16px] xl:text-[18px] text-justify font-be-vietnam-pro font-normal">
                 Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam
                 eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et.
                 Ac cum eget habitasse in velit fringilla feugiat senectus in.
               </p>
             </div>
-            <div className="mt-4 w-1/4 justify-end md:flex">
+            <div className="w-1/4 justify-end md:flex items-center">
               <button className="bg-orangeBg text-white p-2 rounded hover:bg-white hover:text-black border border-orangeBg w-auto">
                 View all
               </button>
@@ -270,17 +271,17 @@ function Home() {
           </div>
         </div>
         {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Our Course ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
-        <div className="flex flex-col pt-5 bg-grayBg max-w-[1280px] xl:mx-auto mx-4 font-be-vietnam-pro">
-          <h3 className="text-2xl md:text-4xl font-bold ">Our Courses</h3>
-          <div className=" rounded-lg md:flex ">
+        <div className="flex flex-col pt-16 bg-grayBg max-w-[1280px] xl:mx-auto mx-4 font-be-vietnam-pro">
+          <h3 className="text-[28px] md:text-[38px] xl:text-[48px] font-semibold ">Our Courses</h3>
+          <div className="md:flex ">
             <div className="md:w-3/4">
-              <p className="text-[14px] md:text-[16px] text-justify">
+              <p className="text-[14px] md:text-[16px] xl:text-[18px] text-justify font-be-vietnam-pro font-normal">
                 Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam
                 eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et.
                 Ac cum eget habitasse in velit fringilla feugiat senectus in.
               </p>
             </div>
-            <div className="mt-4 w-1/4 justify-end md:flex">
+            <div className="w-1/4 justify-end md:flex items-center">
               <button className="bg-orangeBg text-white p-2 rounded hover:bg-white hover:text-black border border-orangeBg w-auto">
                 View all
               </button>
@@ -304,17 +305,17 @@ function Home() {
 
         {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Our Testimonial ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
 
-        <div className="flex flex-col pt-5 bg-grayBg max-w-[1280px] xl:mx-auto mx-4 ">
-          <h3 className=" text-2xl md:text-4xl font-bold ">Our Testimonial</h3>
+        <div className="flex flex-col pt-16 bg-grayBg max-w-[1280px] xl:mx-auto mx-4 font-be-vietnam-pro">
+          <h3 className=" text-[28px] md:text-[38px] xl:text-[48px] font-semibold ">Our Testimonial</h3>
           <div className="rounded-lg md:flex">
             <div className="md:w-3/4">
-              <p className="text-[14px] md:text-[16px] text-justify">
+              <p className="text-[14px] md:text-[16px] xl:text-[18px] text-justify font-normal font-be-vietnam-pro">
                 Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam
                 eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et.
                 Ac cum eget habitasse in velit fringilla feugiat senectus in.
               </p>
             </div>
-            <div className="mt-4 w-1/4 justify-end md:flex">
+            <div className="w-1/4 justify-end md:flex items-center">
               <button className="bg-orangeBg text-white p-2 rounded hover:bg-white hover:text-black border border-orangeBg w-auto">
                 View all
               </button>
@@ -328,20 +329,20 @@ function Home() {
         </div>
 
         {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ pricing boxed ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */}
-        <div className="flex flex-col pt-5 bg-grayBg max-w-[1280px] xl:mx-auto mx-4 font-be-vietnam-pro">
-          <h3 className=" text-2xl md:text-4xl font-bold ">Our Pricing</h3>
+        <div className="flex flex-col pt-16 bg-grayBg max-w-[1280px] xl:mx-auto mx-4 font-be-vietnam-pro">
+          <h3 className=" text-[28px] md:text-[38px] xl:text-[48px] font-semibold font-be-vietnam-pro">Our Pricing</h3>
           <div className="rounded-lg md:flex">
-            <div className="mt-4 md:flex justify-between ">
-              <p className="text-[14px] md:text-[16px] md:w-3/4 text-justify">
+            <div className="md:flex justify-between ">
+              <p className="text-[14px] md:text-[16px] xl:text-[18px] font-be-vietnam-pro md:w-3/4 text-justify">
                 Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam
                 eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et.
                 Ac cum eget habitasse in velit fringilla feugiat senectus in.
               </p>
-              <div className="bg-white p-2 md:w-[20%] xl:w-[13%] w-1/2 mt-4 md:mt-0 rounded mb-5 flex justify-between">
-                <button className="bg-orangeBg text-white p-2 rounded hover:bg-white hover:text-black border w-auto">
+              <div className="bg-white p-2 md:w-[20%] xl:w-[13%] w-1/2 mt-4 md:mt-0 rounded mb-5 flex justify-between items-center">
+                <button className="bg-white text-black p-2 rounded hover:bg-orangeBg hover:text-white border border-grayColor  w-auto">
                   Monthly
                 </button>
-                <button className="bg-white text-black p-2 rounded hover:bg-orangeBg hover:text-white border  w-auto">
+                <button className="bg-white text-black p-2 rounded hover:bg-orangeBg hover:text-white border border-grayColor  w-auto">
                   Yearly
                 </button>
               </div>
@@ -362,7 +363,7 @@ function Home() {
         </div>
         {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  FAQ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
         <div className="flex flex-col pt-5 bg-grayBg max-w-[1280px] xl:mx-auto mx-4 font-be-vietnam-pro">
-          <div className="bg-white md:px-2 xl:px-20 lg px-4 py-6 pt-5 mb-10 md:flex rounded-xl">
+          <div className="bg-white md:px-2 xl:px-20 px-4 py-6 pt-5 mb-10 md:flex rounded-xl">
             <FAQ />
           </div>
         </div>

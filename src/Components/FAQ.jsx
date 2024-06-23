@@ -10,7 +10,11 @@ function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFAQ = (index) => {
-    setOpenIndex(index === openIndex ? null : index);
+    if (openIndex === index) {
+      setOpenIndex(null); // Close the currently open FAQ
+    } else {
+      setOpenIndex(index); // Open the selected FAQ
+    }
   };
 
   const faqs = [
@@ -44,46 +48,49 @@ function FAQ() {
   ];
 
   return (
-    <div className="mx-auto md:flex justify-between w-full mt-10">
-      <div className="md:w-[40%]">
-        <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-        <p className="mb-8">
+    <div className="mx-auto md:flex justify-between w-full mt-10 font-be-vietnam-pro">
+      <div className="md:w-1/2">
+        <h2 className="text-[28px] md:text-[38px] xl:text-[48px] font-semibold leading-tight">Frequently Asked Questions</h2>
+        <p className="text-[14px] md:text-[16px] xl:text-[18px] font-be-vietnam-pro font-normal mt-4">
           Still have any questions? Contact our Team via support@skillbridge.com
         </p>
+        <button className="text-[14px] md:text-[16px] xl:text-[18px] font-be-vietnam-pro font-normal mt-8 p-3 rounded-md hover:bg-orangeBg hover:text-white border border-grayColor">See All FAQ’s</button>
       </div>
-      <div className="md:w-[60%]">
-        {faqs.map((faq, index) => (
-          <div key={index} className="mb-6">
-            <button
-              onClick={() => toggleFAQ(index)}
-              className="flex justify-between items-center w-full p-6 bg-white shadow-md rounded-lg focus:outline-none"
-            >
-              <span className="font-medium">{faq.question}</span>
-              <span className="font-[18px]">
-                {openIndex === index ? (
-                  <HiOutlineXMark className="p-1 rounded text-[24px] bg-[#FFF4E5] " />
-                ) : (
-                  <HiOutlinePlus className="p-1 rounded text-[24px] bg-[#FFF4E5]" />
-                )}
-              </span>
-            </button>
+      <div className="md:w-1/2">
+      {faqs.map((faq, index) => (
+        <div key={index} className="mb-6">
+          <button
+            onClick={() => toggleFAQ(index)}
+            className="w-full p-6 bg-white rounded-lg border border-grayColor outline-none"
+          >
+            <div className="flex justify-between items-center text-left font-be-vietnam-pro">
+            <span className="font-medium">{faq.question}</span>
+            <span className="font-[18px]">
+              {openIndex === index ? (
+                <HiOutlineXMark className="p-2 rounded text-[32px] bg-[#FFF4E5]" />
+              ) : (
+                <HiOutlinePlus className="p-2 rounded text-[32px] bg-[#FFF4E5]" />
+              )}
+            </span>
+            </div>
             {openIndex === index && (
-                <div className="p-4 border rounded-lg">
-                    <p className="mb-2">{faq.answer}</p>
-                    {faq.link && (
-                        <div className="m-4 bg-gray-200 p-4 rounded-md items-center ">
-                            <a href="#" className="flex justify-between">
-                                {faq.link}
-                                <HiOutlineArrowSmallRight className="p-1 rounded text-[24px] bg-white cursor-pointer" />
-                            </a>
-                           
-                        </div>
-                    )}
+            <div className=" border-t border-grayColor mt-4 font-be-vietnam-pro">
+              <p className="mb-2 mt-10 text-left">{faq.answer}</p>
+              {faq.link && (
+                <div className="m-4 bg-grayBg p-4 rounded-md items-center">
+                  <a href="#" className="flex justify-between items-center text-left">
+                    {faq.link}
+                    <HiOutlineArrowSmallRight className="p-2 rounded-[50%] text-[32px] bg-white cursor-pointer" />
+                  </a>
                 </div>
-            )}
-          </div>
-        ))}
-      </div>
+              )}
+            </div>
+          )}
+          </button>
+        
+        </div>
+      ))}
+    </div>
     </div>
   );
 }
