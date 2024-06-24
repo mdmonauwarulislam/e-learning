@@ -242,23 +242,23 @@ function Home() {
       <div className="bg-grayBg font-be-vietnam-pro">
         
         <div className="flex flex-col xl:pt-80 md:pt-36 pt-10 bg-grayBg max-w-[1280px] xl:mx-auto mx-4 ">
-          <h3 className="text-[28px] md:text-[38px] xl:text-[48px] font-semibold font-be-vietnam-pro ">Benefits</h3>
+          <h3 className="text-[28px] md:text-[38px] xl:text-[48px] font-semibold font-be-vietnam-pro text-grayH">Benefits</h3>
           <div className="md:flex">
             <div className="md:w-3/4">
-              <p className="text-[14px] md:text-[16px] xl:text-[18px] text-justify font-be-vietnam-pro font-normal">
+              <p className="text-[14px] md:text-[16px] xl:text-[18px] text-justify font-be-vietnam-pro font-normal text-grayPara">
                 Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam
                 eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et.
                 Ac cum eget habitasse in velit fringilla feugiat senectus in.
               </p>
             </div>
-            <div className="w-1/4 justify-end md:flex items-center">
-              <button className="bg-orangeBg text-white p-2 rounded hover:bg-white hover:text-black border border-orangeBg w-auto">
+            <div className="w-1/4 justify-end md:flex items-center mt-4 md:mt-0">
+              <button className="bg-orangeBg text-white p-3 rounded hover:bg-white hover:text-black border border-orangeBg w-auto">
                 View all
               </button>
             </div>
           </div>
           <div
-            className={`md:grid md:grid-cols-3 gap-4 md:pt-12 pt-3 space-y-4 md:space-y-0`}
+            className={`md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:pt-12 pt-3 space-y-4 md:space-y-0`}
           >
             {benefitCard.map((item, index) => (
               <BenifitCard
@@ -272,17 +272,17 @@ function Home() {
         </div>
         {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Our Course ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
         <div className="flex flex-col pt-16 bg-grayBg max-w-[1280px] xl:mx-auto mx-4 font-be-vietnam-pro">
-          <h3 className="text-[28px] md:text-[38px] xl:text-[48px] font-semibold ">Our Courses</h3>
+          <h3 className="text-[28px] md:text-[38px] xl:text-[48px] font-semibold text-grayH">Our Courses</h3>
           <div className="md:flex ">
             <div className="md:w-3/4">
-              <p className="text-[14px] md:text-[16px] xl:text-[18px] text-justify font-be-vietnam-pro font-normal">
+              <p className="text-[14px] md:text-[16px] xl:text-[18px] text-justify font-be-vietnam-pro font-normal text-grayPara">
                 Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam
                 eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et.
                 Ac cum eget habitasse in velit fringilla feugiat senectus in.
               </p>
             </div>
-            <div className="w-1/4 justify-end md:flex items-center">
-              <button className="bg-orangeBg text-white p-2 rounded hover:bg-white hover:text-black border border-orangeBg w-auto">
+            <div className="w-1/4 justify-end md:flex items-center mt-4 md:mt-0">
+              <button className="bg-orangeBg text-white p-3 rounded hover:bg-white hover:text-black border border-orangeBg w-auto">
                 View all
               </button>
             </div>
@@ -306,22 +306,22 @@ function Home() {
         {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Our Testimonial ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
 
         <div className="flex flex-col pt-16 bg-grayBg max-w-[1280px] xl:mx-auto mx-4 font-be-vietnam-pro">
-          <h3 className=" text-[28px] md:text-[38px] xl:text-[48px] font-semibold ">Our Testimonial</h3>
+          <h3 className=" text-[28px] md:text-[38px] xl:text-[48px] font-semibold text-grayH">Our Testimonial</h3>
           <div className="rounded-lg md:flex">
             <div className="md:w-3/4">
-              <p className="text-[14px] md:text-[16px] xl:text-[18px] text-justify font-normal font-be-vietnam-pro">
+              <p className="text-[14px] md:text-[16px] xl:text-[18px] text-justify font-normal font-be-vietnam-pro text-grayPara">
                 Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam
                 eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et.
                 Ac cum eget habitasse in velit fringilla feugiat senectus in.
               </p>
             </div>
-            <div className="w-1/4 justify-end md:flex items-center">
-              <button className="bg-orangeBg text-white p-2 rounded hover:bg-white hover:text-black border border-orangeBg w-auto">
+            <div className="w-1/4 justify-end md:flex items-center mt-4 md:mt-0">
+              <button className="bg-orangeBg text-white p-3 rounded hover:bg-white hover:text-black border border-orangeBg w-auto">
                 View all
               </button>
             </div>
           </div>
-          <div className=" mt-4 md:grid md:grid-cols-2 gap-4 space-y-4 md:space-y-0">
+          <div className=" mt-10 md:grid md:grid-cols-2 gap-4 space-y-4 md:space-y-0">
             {testimonial.map((item, index) => (
               <Testinmonial key={index} review={item.review} user={item.user} />
             ))}
@@ -330,25 +330,25 @@ function Home() {
 
         {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ pricing boxed ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */}
         <div className="flex flex-col pt-16 bg-grayBg max-w-[1280px] xl:mx-auto mx-4 font-be-vietnam-pro">
-          <h3 className=" text-[28px] md:text-[38px] xl:text-[48px] font-semibold font-be-vietnam-pro">Our Pricing</h3>
+          <h3 className=" text-[28px] md:text-[38px] xl:text-[48px] font-semibold font-be-vietnam-pro text-grayH">Our Pricing</h3>
           <div className="rounded-lg md:flex">
             <div className="md:flex justify-between ">
-              <p className="text-[14px] md:text-[16px] xl:text-[18px] font-be-vietnam-pro md:w-3/4 text-justify">
+              <p className="text-[14px] md:text-[16px] xl:text-[18px] font-be-vietnam-pro md:w-3/4 text-justify text-grayPara">
                 Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam
                 eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et.
                 Ac cum eget habitasse in velit fringilla feugiat senectus in.
               </p>
-              <div className="bg-white p-2 md:w-[20%] xl:w-[13%] w-1/2 mt-4 md:mt-0 rounded mb-5 flex justify-between items-center">
-                <button className="bg-white text-black p-2 rounded hover:bg-orangeBg hover:text-white border border-grayColor  w-auto">
+              <div className="bg-white p-2 md:w-[20%] xl:w-[13%] w-1/2 mt-4 md:mt-0 rounded mb-5 flex justify-between items-center ">
+                <button className="bg-white p-3 rounded hover:bg-orangeBg text-grayH hover:text-white border-2 border-grayColor  w-auto">
                   Monthly
                 </button>
-                <button className="bg-white text-black p-2 rounded hover:bg-orangeBg hover:text-white border border-grayColor  w-auto">
+                <button className="bg-white  p-3 rounded hover:bg-orangeBg text-grayH hover:text-white border-2 border-grayColor  w-auto">
                   Yearly
                 </button>
               </div>
             </div>
           </div>
-          <div className="bg-white md:px-2 xl:px-20 lg px-4 py-6 pt-5 mb-10 md:flex rounded-xl font-be-vietnam-pro">
+          <div className="bg-white md:px-2 xl:px-20 px-4 py-6 pt-5 mb-10 md:flex rounded-xl font-be-vietnam-pro">
             {pricing.map((item, index) => (
               <Pricing
                 key={index}

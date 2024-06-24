@@ -2,20 +2,20 @@
 
 function BenifitCard(props) {
   return (
-    <div className="bg-white px-6 md:px-10 rounded-lg py-10">
-      <div>
-        <h1 className="text-7xl font-bold text-right mb-4">0{props.id}</h1>
+    <div className="bg-white p-[30px] md:p-10 xl:p-[50px] rounded-lg">
+
+      <h4 className="flex justify-end items-center w-full text-[50px] md:text-[60px] xl:text-[80px] leading-none font-bold font-be-vietnam-pro text-grayH">0{props.id}</h4>
+
+      <div className="w-full my-8 md:my-10 leading-none tracking-none">
+        <div className="text-[20px] xl:text-[24px] font-semibold font-be-vietnam-pro text-blackH">{props.title}</div>
+        <div className="text-[14px] md:text-[16px] xl:text-[18px] font-be-vietnam-pro font-normal text-blackPara mt-4">{props.disc}</div>
       </div>
-      <div className="md:mb-4 md:mt-8">
-        <h4 className="text-[22px] font-semibold mb-2">{props.title}</h4>
-        <p className="text-[16px]">{props.disc}</p>
-      </div>
-      <div>
-        <div className="flex justify-end">
-          <button className="mt-4 text-white p-5 rounded border border-orangeBg ">
+      <div className="">
+        <div className="flex justify-end items-center">
+          <button className="text-white p-5 text-4xl rounded border-2 border-grayBg ">
             <img
-              width="18"
-              height="18"
+              width="20"
+              height="20"
               className=""
               src="https://img.icons8.com/windows/32/FF9500/up-right-arrow.png"
               alt="arrow"
