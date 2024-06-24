@@ -338,7 +338,7 @@ function Home() {
                 eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et.
                 Ac cum eget habitasse in velit fringilla feugiat senectus in.
               </p>
-              <div className="bg-white p-2 md:w-[20%] xl:w-[13%] w-1/2 mt-4 md:mt-0 rounded mb-5 flex justify-between items-center ">
+              <div className="bg-white p-2 md:w-[30%] xl:w-[16%] w-1/2 mt-4 md:mt-0 rounded mb-5 flex justify-evenly items-center font-be-vietnam-pro">
                 <button className="bg-white p-3 rounded hover:bg-orangeBg text-grayH hover:text-white border-2 border-grayColor  w-auto">
                   Monthly
                 </button>

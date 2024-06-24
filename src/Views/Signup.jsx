@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
 import Testinmonial from "../Components/Testinmonial";
 import SignupCard from '../Components/SignupCard';
