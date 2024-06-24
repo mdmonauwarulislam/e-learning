@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useRef } from "react";
 import video from "../assets/Image/video.mp4";
-import OpenCourseCard from "../Components/Header/OpenCourseCard";
+import OpenCourseCard from "../Components/OpenCourseCard";
 
 
 function CourseOpen() {
@@ -85,18 +85,18 @@ function CourseOpen() {
 
 
   return (
-    <div className="pt-16 bg-grayColor pb-4">
+    <div className="pt-16 bg-grayBg pb-4">
       <div className="md:flex justify-between items-center max-w-[1280px] xl:mx-auto ">
-        <div className="md:w-1/2 md:text-[42px] text-[22px] font-semibold md:inline md:pr-4">
+        <div className="md:w-1/2 text-[28px] md:text-[38px] xl:text-[48px] font-semibold md:pr-4 text-grayH">
           <h3>UI/UX Design Course</h3>
         </div>
-        <div className="md:w-1/2 text-[12x] md:text-[16px] md:inline md:py-4 md:pl-4 mt-2 md:mt-0 text-justify">
+        <div className="md:w-1/2 text-[14px] md:text-[16px] xl:text-[18px] text-grayPara md:inline md:py-4 md:pl-4 mt-2 md:mt-0 text-justify">
         Welcome to our UI/UX Design course! This comprehensive program will equip you with the knowledge and skills to create exceptional user interfaces (UI) and enhance user experiences (UX). Dive into the world of design thinking, wireframing, prototyping, and usability testing. Below is an overview of the curriculum
         </div>
       </div>
-      <div className="border border-gray-200 mx-auto max-w-[1450px] my-12"></div>
+      <div className="border border-grayColor mx-auto max-w-[1450px] my-12"></div>
 
-      <div className="bg-grayColor">
+      <div className="bg-grayBg">
         <div className=" flex items-center justify-center xl:mt-0 md:mt-[-300px] mt-[-480px] mx-4 max-w-[1280px] xl:mx-auto max-h-[675px]">
           <div
             style={{

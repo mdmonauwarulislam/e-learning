@@ -61,12 +61,12 @@ function About() {
     },
   ];
   return (
-    <div className="pt-16 bg-grayColor pb-4">
+    <div className="pt-16 bg-grayBg pb-4">
       <div className="md:flex justify-between items-center max-w-[1280px] xl:mx-auto mx-4 pb-12">
-        <div className="md:w-1/2 md:text-[42px] text-[22px] font-semibold md:pr-4">
-          <h3 className="pt-4">About Skillbridge</h3>
+        <div className="md:w-1/2 text-[28px] md:text-[38px] xl:text-[48px] font-semibold md:pr-4 text-grayH">
+          <h3 className="">About Skillbridge</h3>
         </div>
-        <div className="md:w-1/2 text-[12x] md:text-[16px] md:py-4 md:pl-4 mt-2 md:mt-0 text-justify">
+        <div className="md:w-1/2 text-[14px] md:text-[16px] xl:text-[18px] text-grayPara md:inline md:py-4 md:pl-4 mt-2 md:mt-0 text-justify">
           Welcome to our platform, where we are passionate about empowering
           individuals to master the world of design and development. We offer a
           wide range of online courses designed to equip learners with the
@@ -76,10 +76,10 @@ function About() {
       </div>
       <div className="border max-w-[1400px] xl:mx-auto mx-4 mb-12"></div>
       <div className="max-w-[1280px] xl:mx-auto mx-4">
-        <h3 className="md:text-[42px] text-[22px] font-semibold ">
-          About Skillbridge
+        <h3 className="md:w-1/2 text-[28px] md:text-[38px] xl:text-[48px] font-semibold md:pr-4 text-grayH">
+        Achievements
         </h3>
-        <p className="text-[12x] md:text-[16px] md:py-3 mt-2 md:mt-0 text-justify">
+        <p className="md:w-1/2 text-[14px] md:text-[16px] xl:text-[18px] text-grayPara md:inline md:py-4  mt-2 md:mt-0 text-justify">
           Our commitment to excellence has led us to achieve significant
           milestones along our journey. Here are some of our notable
           achievements
@@ -96,8 +96,8 @@ function About() {
         ))}
       </div>
       <div className="max-w-[1280px] xl:mx-auto mx-4 mt-20">
-        <h3 className="md:text-[42px] text-[22px] font-semibold ">Our Goals</h3>
-        <p className="text-[12x] md:text-[16px] md:py-3 mt-2 md:mt-0 text-justify">
+        <h3 className="md:w-1/2 text-[28px] md:text-[38px] xl:text-[48px] font-semibold md:pr-4 text-grayH">Our Goals</h3>
+        <p className="md:w-1/2 text-[14px] md:text-[16px] xl:text-[18px] text-grayPara md:inline md:py-4 mt-2 md:mt-0 text-justify">
           At SkillBridge, our goal is to empower individuals from all
           backgrounds to thrive in the world of design and development. We
           believe that education should be accessible and transformative,
