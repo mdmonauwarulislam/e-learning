@@ -61,7 +61,7 @@ function About() {
     },
   ];
   return (
-    <div className="pt-16 bg-grayBg pb-4">
+    <div className="pt-16 bg-grayBg pb-4 font-be-vietnam-pro">
       <div className="md:flex justify-between items-center max-w-[1280px] xl:mx-auto mx-4 pb-12">
         <div className="md:w-1/2 text-[28px] md:text-[38px] xl:text-[48px] font-semibold md:pr-4 text-grayH">
           <h3 className="">About Skillbridge</h3>
@@ -77,7 +77,7 @@ function About() {
       <div className="border max-w-[1400px] xl:mx-auto mx-4 mb-12"></div>
       <div className="max-w-[1280px] xl:mx-auto mx-4">
         <h3 className="md:w-1/2 text-[28px] md:text-[38px] xl:text-[48px] font-semibold md:pr-4 text-grayH">
-        Achievements
+          Achievements
         </h3>
         <p className="md:w-1/2 text-[14px] md:text-[16px] xl:text-[18px] text-grayPara md:inline md:py-4  mt-2 md:mt-0 text-justify">
           Our commitment to excellence has led us to achieve significant
@@ -117,28 +117,28 @@ function About() {
           />
         ))}
       </div>
-      <div className="bg-white max-w-[1280px] xl:mx-auto mx-4 mb-12 mt-20 rounded-md">
+      <div className="bg-white max-w-[1280px] xl:mx-auto mx-4 mb-12 mt-20 rounded-md ">
         <div className=" md:flex justify-between items-center md:py-20 ">
-          
-           <div className=" md:px-16 px-8 py-8 md:py-0 md:w-[75%]">
-          <h2 className="md:text-[38px] text-[28px] font-semibold leading-tight">
-            <span className="text-orangeBg">Together</span>, let's shape the
-            future of digital innovation
-          </h2>
-          <p className="text-[16px] mt-2">
-            Join us on this exciting learning journey and unlock your potential
-            in design and development.
-          </p>
-        </div>
-       
+
+          <div className=" md:px-16 px-8 py-8 md:py-0 md:w-[75%]">
+            <h2 className="text-[28px] md:text-[38px] xl:text-[48px] font-semibold leading-tight text-grayH">
+              <span className="text-orangeBg">Together</span>, let's shape the
+              future of digital innovation
+            </h2>
+            <p className="text-[14px] md:text-[16px] xl:text-[18px] text-grayPara text-justify mt-2">
+              Join us on this exciting learning journey and unlock your potential
+              in design and development.
+            </p>
+          </div>
+
           <div className=" pb-8 md:pb-0 md:px-16 px-8">
-          <button className="bg-orangeBg text-white rounded p-2 text-[15px]">
-            Join Now
-          </button>
+            <button className="hover:bg-orangeBg hover:text-white border-2 border-grayColor rounded-md p-3 text-[14px] md:text-[16px] xl:text-[18px] text-grayPara">
+              Join Now
+            </button>
           </div>
         </div>
 
-       
+
       </div>
     </div>
   );

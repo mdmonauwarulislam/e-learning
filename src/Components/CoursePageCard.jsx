@@ -12,10 +12,10 @@ const CoursePageCard = ({ course }) => {
           <p className="text-[14px] md:text[16px] xl:text-[18px] font-normal text-blackPara mb-[24px] xl:mb-[30px]">{course.description}</p>
         </div>
         <div className="md:w-1/4 justify-end md:flex item-center">
-          <Link to = "/CourseOpen">
-          <button className="bg-white p-2 rounded hover:bg-orange-500 hover:text-white border-2 border-grayColor transition duration-300 w-auto">
-            View Course
-          </button>
+          <Link to="/CourseOpen">
+            <button className="bg-white p-2 rounded hover:bg-orange-500 hover:text-white border-2 border-grayColor transition duration-300 w-auto">
+              View Course
+            </button>
           </Link>
         </div>
       </div>

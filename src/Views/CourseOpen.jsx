@@ -5,7 +5,7 @@ import OpenCourseCard from "../Components/OpenCourseCard";
 
 
 function CourseOpen() {
-    const videoRef = useRef(null);
+  const videoRef = useRef(null);
 
   const handlePlayPause = () => {
     const videoElement = videoRef.current;
@@ -91,7 +91,7 @@ function CourseOpen() {
           <h3>UI/UX Design Course</h3>
         </div>
         <div className="md:w-1/2 text-[14px] md:text-[16px] xl:text-[18px] text-grayPara md:inline md:py-4 md:pl-4 mt-2 md:mt-0 text-justify">
-        Welcome to our UI/UX Design course! This comprehensive program will equip you with the knowledge and skills to create exceptional user interfaces (UI) and enhance user experiences (UX). Dive into the world of design thinking, wireframing, prototyping, and usability testing. Below is an overview of the curriculum
+          Welcome to our UI/UX Design course! This comprehensive program will equip you with the knowledge and skills to create exceptional user interfaces (UI) and enhance user experiences (UX). Dive into the world of design thinking, wireframing, prototyping, and usability testing. Below is an overview of the curriculum
         </div>
       </div>
       <div className="border border-grayColor mx-auto max-w-[1450px] my-12"></div>
@@ -120,17 +120,17 @@ function CourseOpen() {
         </div>
       </div>
       <div className="md:grid md:grid-cols-2 max-w-[1280px] xl:mx-auto gap-6 mt-10">
-      {courses.map((course, index) => (
-              <OpenCourseCard
-                key={index}
-                part={course.part}
-                intro={course.intro}
-                lessons={course.lessons}
-              
-              />
-            ))}
+        {courses.map((course, index) => (
+          <OpenCourseCard
+            key={index}
+            part={course.part}
+            intro={course.intro}
+            lessons={course.lessons}
+
+          />
+        ))}
       </div>
-      </div>
+    </div>
   )
 }
 

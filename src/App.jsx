@@ -13,21 +13,21 @@ import Signup from './Views/Signup';
 import CourseOpen from './Views/CourseOpen';
 
 function App() {
-  
+
   return (
     <div>
-      <Header/>
+      <Header />
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/Contact' element={<Contact/>}/>
-        <Route path='/Course' element={<Course/>}/>
-        <Route path='/CourseOpen' element={<CourseOpen/>}/>
-        <Route path='/About' element={<About/>}/>
-        <Route path='/Pricing' element={<PricingPage/>}/>
-        <Route path='/Login' element={<Login/>}/>
-        <Route path='/Signup' element={<Signup/>}/>
+        <Route path='/' element={<Home />} />
+        <Route path='/Contact' element={<Contact />} />
+        <Route path='/Course' element={<Course />} />
+        <Route path='/CourseOpen' element={<CourseOpen />} />
+        <Route path='/About' element={<About />} />
+        <Route path='/Pricing' element={<PricingPage />} />
+        <Route path='/Login' element={<Login />} />
+        <Route path='/Signup' element={<Signup />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   )
 }

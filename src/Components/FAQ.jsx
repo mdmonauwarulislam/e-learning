@@ -57,40 +57,40 @@ function FAQ() {
         <button className="text-[14px] md:text-[16px] xl:text-[18px] font-be-vietnam-pro font-normal mt-8 mb-4 md:mb-0 p-3 rounded-md hover:bg-orangeBg hover:text-white border-2 border-grayColor">See All FAQ’s</button>
       </div>
       <div className="md:w-1/2">
-      {faqs.map((faq, index) => (
-        <div key={index} className="mb-6">
-          <button
-            onClick={() => toggleFAQ(index)}
-            className="w-full p-6 bg-white rounded-lg border-2 border-grayColor outline-none"
-          >
-            <div className="flex justify-between items-center text-left font-be-vietnam-pro">
-            <span className="font-medium text-[16px] md:text-[18px] xl:text-[20px] text-grayH ">{faq.question}</span>
-            <span className="font-[18px]">
-              {openIndex === index ? (
-                <HiOutlineXMark className="p-2 rounded text-[32px] xl:text-[40px] bg-[#FFF4E5]" />
-              ) : (
-                <HiOutlinePlus className="p-2 rounded text-[32px] xl:text-[40px] bg-[#FFF4E5]" />
-              )}
-            </span>
-            </div>
-            {openIndex === index && (
-            <div className=" border-t border-grayColor mt-4 font-be-vietnam-pro">
-              <p className="mb-3 mt-6 text-[14px] md:text-[16px] xl:text-[18px] text-grayPara text-left">{faq.answer}</p>
-              {faq.link && (
-                <div className=" bg-grayBg p-4 rounded-md items-center">
-                  <a href="#" className="flex justify-between items-center text-[14px] md:text-[16px] xl:text-[18px] text-grayH font-medium text-left">
-                    {faq.link}
-                    <HiOutlineArrowSmallRight className="p-2 rounded-[50%] text-[32px] xl:text-[40px] bg-white cursor-pointer" />
-                  </a>
+        {faqs.map((faq, index) => (
+          <div key={index} className="mb-6">
+            <button
+              onClick={() => toggleFAQ(index)}
+              className="w-full p-6 bg-white rounded-lg border-2 border-grayColor outline-none"
+            >
+              <div className="flex justify-between items-center text-left font-be-vietnam-pro">
+                <span className="font-medium text-[16px] md:text-[18px] xl:text-[20px] text-grayH ">{faq.question}</span>
+                <span className="font-[18px]">
+                  {openIndex === index ? (
+                    <HiOutlineXMark className="p-2 rounded text-[32px] xl:text-[40px] bg-[#FFF4E5]" />
+                  ) : (
+                    <HiOutlinePlus className="p-2 rounded text-[32px] xl:text-[40px] bg-[#FFF4E5]" />
+                  )}
+                </span>
+              </div>
+              {openIndex === index && (
+                <div className=" border-t border-grayColor mt-4 font-be-vietnam-pro">
+                  <p className="mb-3 mt-6 text-[14px] md:text-[16px] xl:text-[18px] text-grayPara text-left">{faq.answer}</p>
+                  {faq.link && (
+                    <div className=" bg-grayBg p-4 rounded-md items-center">
+                      <a href="#" className="flex justify-between items-center text-[14px] md:text-[16px] xl:text-[18px] text-grayH font-medium text-left">
+                        {faq.link}
+                        <HiOutlineArrowSmallRight className="p-2 rounded-[50%] text-[32px] xl:text-[40px] bg-white cursor-pointer" />
+                      </a>
+                    </div>
+                  )}
                 </div>
               )}
-            </div>
-          )}
-          </button>
-        
-        </div>
-      ))}
-    </div>
+            </button>
+
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

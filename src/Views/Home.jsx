@@ -183,7 +183,7 @@ function Home() {
       <div className="bg-grayBg h-screen pt-8 md:pt-32 font-be-vietnam-pro">
         <div className="pt-6 text-center">
           <div className="w-full flex justify-center">
-            <div className="flex items-center justify-between bg-white py-2 px-4 rounded-md mb-4 border border-grayColor">
+            <div className="flex items-center justify-between bg-white py-2 px-4 rounded-md mb-4 border-2 border-grayColor">
               <HiBolt className="h-16 w-16 bg-orange-100 p-4 rounded text-center" />
               <h5 className="text-[16px] md:text-[34px] lg:text-[36px] xl:text-[48px] font-semibold ml-3">
                 <span className="text-orangeBg">Unlock</span> Your Creative
@@ -201,10 +201,10 @@ function Home() {
           </div>
         </div>
         <div className="mt-8 flex  md:space-y-0 justify-center gap-4 text-[14px] lg:text-[14px] xl:text-[18px] font-medium font-be-vietnam-pro">
-          <button className="bg-white hover:bg-orangeBg py-3 px-3 rounded-md hover:text-white border border-grayColor w-auto">
+          <button className="bg-white hover:bg-orangeBg hover:shadow hover:shadow-orangeBg py-3 px-3 rounded-md hover:text-white border-2 hover:border-none border-grayColor w-auto">
             Explore Courses
           </button>
-          <button className="bg-white hover:bg-orangeBg py-3 px-3 rounded-md hover:text-white border border-grayColor w-auto">
+          <button className="bg-white hover:bg-orangeBg hover:shadow hover:shadow-orangeBg py-3 px-3 rounded-md hover:text-white border-2 hover:border-none border-grayColor w-auto">
             View Pricing
           </button>
         </div>
@@ -240,7 +240,7 @@ function Home() {
       </div>
       {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Benefit Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */}
       <div className="bg-grayBg font-be-vietnam-pro">
-        
+
         <div className="flex flex-col xl:pt-80 md:pt-36 pt-10 bg-grayBg max-w-[1280px] xl:mx-auto mx-4 ">
           <h3 className="text-[28px] md:text-[38px] xl:text-[48px] font-semibold font-be-vietnam-pro text-grayH">Benefits</h3>
           <div className="md:flex">
@@ -252,7 +252,7 @@ function Home() {
               </p>
             </div>
             <div className="w-1/4 justify-end md:flex items-center mt-4 md:mt-0">
-              <button className="bg-orangeBg text-white p-3 rounded hover:bg-white hover:text-black border border-orangeBg w-auto">
+              <button className="bg-white text-[14px] md:text-[16px] xl:text-[18px] hover:bg-orangeBg hover:shadow hover:shadow-orangeBg py-3 px-3 rounded-md hover:text-white border-2 hover:border-none border-grayColor text-grayH p-3  w-auto">
                 View all
               </button>
             </div>
@@ -282,7 +282,7 @@ function Home() {
               </p>
             </div>
             <div className="w-1/4 justify-end md:flex items-center mt-4 md:mt-0">
-              <button className="bg-orangeBg text-white p-3 rounded hover:bg-white hover:text-black border border-orangeBg w-auto">
+              <button className="bg-white text-[14px] md:text-[16px] xl:text-[18px] hover:bg-orangeBg hover:shadow hover:shadow-orangeBg py-3 px-3 rounded-md hover:text-white border-2 hover:border-none border-grayColor text-grayH p-3  w-auto">
                 View all
               </button>
             </div>
@@ -316,7 +316,7 @@ function Home() {
               </p>
             </div>
             <div className="w-1/4 justify-end md:flex items-center mt-4 md:mt-0">
-              <button className="bg-orangeBg text-white p-3 rounded hover:bg-white hover:text-black border border-orangeBg w-auto">
+              <button className="bg-white text-[14px] md:text-[16px] xl:text-[18px] hover:bg-orangeBg hover:shadow hover:shadow-orangeBg py-3 px-3 rounded-md hover:text-white border-2 hover:border-none border-grayColor text-grayH p-3  w-auto">
                 View all
               </button>
             </div>
@@ -339,10 +339,10 @@ function Home() {
                 Ac cum eget habitasse in velit fringilla feugiat senectus in.
               </p>
               <div className="bg-white p-2 md:w-[30%] xl:w-[16%] w-1/2 mt-4 md:mt-0 rounded mb-5 flex justify-evenly items-center font-be-vietnam-pro">
-                <button className="bg-white p-3 rounded hover:bg-orangeBg text-grayH hover:text-white border-2 border-grayColor  w-auto">
+                <button className="bg-white text-[14px] md:text-[16px] xl:text-[18px] p-3 hover:bg-orangeBg hover:shadow hover:shadow-orangeBg py-3 px-3 rounded-md hover:text-white border-2 hover:border-none border-grayColor text-grayH  w-auto">
                   Monthly
                 </button>
-                <button className="bg-white  p-3 rounded hover:bg-orangeBg text-grayH hover:text-white border-2 border-grayColor  w-auto">
+                <button className="bg-white text-[14px] md:text-[16px] xl:text-[18px] hover:bg-orangeBg hover:shadow hover:shadow-orangeBg py-3 px-3 rounded-md hover:text-white border-2 hover:border-none border-grayColor text-grayH p-3  w-auto">
                   Yearly
                 </button>
               </div>

@@ -65,21 +65,21 @@ function Course() {
     <div className="pt-16 bg-grayBg pb-4 font-be-vietnam-pro ">
       <div className="md:flex justify-between items-center max-w-[1280px] xl:mx-auto mx-4 pb-12">
         <div className="md:w-1/2 text-[28px] md:text-[38px] xl:text-[48px] font-semibold md:pr-4 text-grayH">
-            <h3>
+          <h3>
             Online Courses on Design and Development
-            </h3>
+          </h3>
         </div>
         <div className="md:w-1/2 text-[14px] md:text-[16px] xl:text-[18px] text-grayPara md:inline md:py-4 md:pl-4 mt-2 md:mt-0 text-justify">
-        Welcome to our online course page, where you can enhance your skills in design and development. Choose from our carefully curated selection of 10 courses designed to provide you with comprehensive knowledge and practical experience. Explore the courses below and find the perfect fit for your learning journey.
+          Welcome to our online course page, where you can enhance your skills in design and development. Choose from our carefully curated selection of 10 courses designed to provide you with comprehensive knowledge and practical experience. Explore the courses below and find the perfect fit for your learning journey.
         </div>
       </div>
       <div className="border border-gray-200 mx-auto max-w-[1450px]"></div>
       <div >
-      <div className="gap-8">
-        {courses.map((course, index) => (
-          <CoursePageCard key={index} course={course} />
-        ))}
-      </div>
+        <div className="gap-8">
+          {courses.map((course, index) => (
+            <CoursePageCard key={index} course={course} />
+          ))}
+        </div>
       </div>
     </div>
   );
