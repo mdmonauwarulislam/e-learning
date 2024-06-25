@@ -1,5 +1,5 @@
 
-import React from 'react'; // Import React
+
 import { Routes, Route } from 'react-router-dom'; // Import Routes and Route components
 import Home from './Views/Home'; // Import Home component
 import Contact from './Views/Contact'; // Import Contact component

@@ -6,9 +6,9 @@ function BenifitCard(props) {
 
       <h4 className="flex justify-end items-center w-full text-[50px] md:text-[60px] xl:text-[80px] leading-none font-bold font-be-vietnam-pro text-grayH">0{props.id}</h4>
 
-      <div className="w-full my-8 md:my-10 leading-none tracking-none">
-        <div className="text-[20px] xl:text-[24px] font-semibold font-be-vietnam-pro text-blackH">{props.title}</div>
-        <div className="text-[14px] md:text-[16px] xl:text-[18px] font-be-vietnam-pro font-normal text-blackPara mt-4">{props.disc}</div>
+      <div className="w-full my-8 md:my-10 ">
+        <div className="text-[20px] xl:text-[24px] font-semibold font-be-vietnam-pro text-blackH leading-none">{props.title}</div>
+        <div className="text-[14px] md:text-[16px] xl:text-[18px] font-be-vietnam-pro tracking-normal font-normal text-blackPara mt-4">{props.disc}</div>
       </div>
       <div className="">
         <div className="flex justify-end items-center">
