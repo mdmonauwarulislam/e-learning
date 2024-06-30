@@ -3,7 +3,7 @@ import ContactCard from "../Components/ContactCard";
 
 function Contact() {
   return (
-    <div className="pt-16 bg-grayBg pb-4 font-be-vietnam-pro">
+    <div className="pt-16 pb-4 bg-grayBg font-be-vietnam-pro">
       <div className="md:flex justify-between items-center max-w-[1280px] xl:mx-auto mx-4 pb-12">
         <div className="md:w-1/2 text-[28px] md:text-[38px] xl:text-[48px] font-semibold text-grayH">
           <h3>Contact Us </h3>
@@ -19,7 +19,7 @@ function Contact() {
         </div>
       </div>
       <div className="border-2 border-grayColor mx-auto max-w-[1450px] "></div>
-      <div className="mt-16 mb-10">
+      <div className="mx-4 mt-16 mb-10 md:mx-0">
         <ContactCard />
       </div>
     </div>

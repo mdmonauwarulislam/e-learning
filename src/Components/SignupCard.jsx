@@ -1,14 +1,32 @@
 import { useState } from 'react';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
+import { BiHandicap } from 'react-icons/bi';
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 
 function SignupCard() {
   const [showPassword, setShowPassword] = useState(false);
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios.post("http://localhost:3000/auth/signup", {
+      fullName,
+      email,
+      password
+    }).then((response) => {
+      console.log(response);
+    }).catch((err) => {
+      console.log(err);
+    })
+  }
 
   return (
     <div className="bg-white p-10 rounded-lg font-be-vietnam-pro ">
@@ -16,13 +34,14 @@ function SignupCard() {
       <p className="text-[14px] md:text-[16px] xl:text-[18px] text-blackPara mb-6 text-center">
         Create an account to unlock exclusive features.
       </p>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="mb-4 text-[14px] md:text-[16px] xl:text-[18px]">
           <label className="font-medium text-blackH">Full Name</label>
           <input
             type="name"
             className="border-2 mt-2 border-grayColor rounded-md w-full py-4 px-4 outline-none text-blackPara   hover:border-grayH hover:border-2"
             placeholder="Enter your Name"
+            onChange={(e) => setFullName(e.target.value)}
           />
         </div>
         <div className="mb-4 text-[14px] md:text-[16px] xl:text-[18px]">
@@ -31,6 +50,7 @@ function SignupCard() {
             type="email"
             className="border-2 mt-2 border-grayColor rounded-md w-full py-4 px-4 outline-none text-blackPara   hover:border-grayH hover:border-2"
             placeholder="Enter your Email"
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="mb-4 text-[14px] md:text-[16px] xl:text-[18px]">
@@ -40,6 +60,7 @@ function SignupCard() {
               type={showPassword ? "text" : "password"}
               className="border-2 mt-2 border-grayColor rounded-md w-full py-4 px-4 outline-none text-blackPara   hover:border-grayH hover:border-2"
               placeholder="Enter your Password"
+              onChange={(e) => setPassword(e.target.value)}
             />
             <span
               className="absolute inset-y-0 right-0 pr-5 flex items-center cursor-pointer font-medium text-blackH"
@@ -73,10 +94,10 @@ function SignupCard() {
       </button>
       <p className="mt-6 text-center text-[14px] md:text-[16px] xl:text-[18px] text-blackPara">
         Already have an account?{" "}
-        <Link to = "/Login">
-        <span href="/Login" className="text-indigo-500 hover:underline">
-          Login
-        </span>
+        <Link to="/Login">
+          <span href="/Login" className="text-indigo-500 hover:underline">
+            Login
+          </span>
         </Link>
       </p>
     </div>

@@ -10,10 +10,12 @@ function login() {
       user: "Monauwarul",
     },
   ];
+
+  
   return (
-    <div className="pt-16 bg-grayBg pb-4 font-be-vietnam-pro">
+    <div className="pt-16 pb-4 bg-grayBg font-be-vietnam-pro">
       <div className="md:flex md:flex-row sm:flex-col justify-between items-center max-w-[1280px] xl:mx-auto mx-4 pb-12">
-        <div className="md:w-[55%] pr-10 md:order-1 order-2">
+        <div className="md:w-[55%] md:pr-10 pr-0 md:order-1 order-2">
           <div className="md:mr-16">
             <div className=" text-[28px] md:text-[38px] xl:text-[48px] font-semibold text-grayH">
               <h3 className="pt-4">Students Testimonials</h3>
@@ -31,12 +33,12 @@ function login() {
               <Testinmonial key={index} review={item.review} user={item.user} />
             ))}
           </div>
-          <div className="flex float-end gap-3 mt-4">
+          <div className="flex gap-3 mt-4 float-end">
             <FaArrowLeft  className="p-4 border rounded-md text-[52px] bg-white"/>
             <FaArrowRight className="p-4 border rounded-md text-[52px] bg-white" />
           </div>
         </div> 
-        <div className="md:w-[45%] md:pl-10 md:order-2 order-1">
+        <div className="md:w-[45%] md:pl-10 md:order-2 order-1 md:mt-0 mt-24">
             <LoginCard/>
         </div>
       </div>
