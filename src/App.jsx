@@ -1,6 +1,6 @@
 
 
-import { Routes, Route } from 'react-router-dom'; // Import Routes and Route components
+import { Routes, Route, } from 'react-router-dom'; // Import Routes and Route components
 import Home from './Views/Home'; // Import Home component
 import Contact from './Views/Contact'; // Import Contact component
 import Course from './Views/Course'; // Import Course component
@@ -11,10 +11,14 @@ import PricingPage from './Views/PricingPage';
 import Login from './Views/Login';
 import Signup from './Views/Signup';
 import CourseOpen from './Views/CourseOpen';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
 
   return (
+    
     <div>
       <Header />
       <Routes>
@@ -28,7 +32,10 @@ function App() {
         <Route path='/Signup' element={<Signup />} />
       </Routes>
       <Footer />
+      <ToastContainer />
     </div>
+    
+    
   )
 }
 

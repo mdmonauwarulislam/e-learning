@@ -215,8 +215,8 @@ function Home() {
 
       {/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ video section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */}
 
-      <div className="bg-grayBg font-be-vietnam-pro">
-        <div className=" flex items-center justify-center xl:mt-0 md:mt-[-300px] mt-[-280px] mx-4 max-w-[1280px] xl:mx-auto">
+      <div className="bg-grayBg font-be-vietnam-pro flex items-start xl:mt-0 md:-mt-[300px] -mt-[220px]">
+        <div className=" flex justify-center mx-4 max-w-[1280px] xl:mx-auto h-auto">
           <div
             style={{
               position: "relative",

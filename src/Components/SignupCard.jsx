@@ -1,32 +1,50 @@
 import { useState } from 'react';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
-import { BiHandicap } from 'react-icons/bi';
+// import { BiHandicap } from 'react-icons/bi';
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { toast } from 'react-toastify';
 
 
 function SignupCard() {
   const [showPassword, setShowPassword] = useState(false);
-  const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
-  const handleSubmit = (e) => {
+  const [userDetails, setUserDetails] = useState({
+    fullName: "",
+    email: "",
+    password: "",
+  })
+
+  const handleInputChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setUserDetails((prevState) => ({
+      ...prevState,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    axios.post("http://localhost:3000/auth/signup", {
-      fullName,
-      email,
-      password
-    }).then((response) => {
-      console.log(response);
-    }).catch((err) => {
-      console.log(err);
-    })
-  }
+    if (!userDetails.agreed) {
+      toast.error("You must agree to the terms and privacy policy");
+      return;
+    }
+    try {
+      const response = await axios.post("http://localhost:8000/signup", userDetails);
+      if (response.status === 201) {
+        toast.success("Registration Successful!");
+      } else {
+        toast.error("Registration failed! Please try again.");
+      }
+    } catch (error) {
+      console.error("Error in registration:", error);
+      toast.error("Registration failed! Please try again.");
+    }
+  };
+
 
   return (
     <div className="bg-white p-10 rounded-lg font-be-vietnam-pro ">
@@ -39,18 +57,24 @@ function SignupCard() {
           <label className="font-medium text-blackH">Full Name</label>
           <input
             type="name"
+            name="fullName"
             className="border-2 mt-2 border-grayColor rounded-md w-full py-4 px-4 outline-none text-blackPara   hover:border-grayH hover:border-2"
             placeholder="Enter your Name"
-            onChange={(e) => setFullName(e.target.value)}
+            value={userDetails.fullName}
+            onChange={handleInputChange}
+            required
           />
         </div>
         <div className="mb-4 text-[14px] md:text-[16px] xl:text-[18px]">
           <label className="font-medium text-blackH">Email</label>
           <input
             type="email"
+            name="email"
             className="border-2 mt-2 border-grayColor rounded-md w-full py-4 px-4 outline-none text-blackPara   hover:border-grayH hover:border-2"
             placeholder="Enter your Email"
-            onChange={(e) => setEmail(e.target.value)}
+            value={userDetails.email}
+            onChange={handleInputChange}
+            required
           />
         </div>
         <div className="mb-4 text-[14px] md:text-[16px] xl:text-[18px]">
@@ -58,9 +82,12 @@ function SignupCard() {
           <div className="relative">
             <input
               type={showPassword ? "text" : "password"}
+              name='password'
               className="border-2 mt-2 border-grayColor rounded-md w-full py-4 px-4 outline-none text-blackPara   hover:border-grayH hover:border-2"
               placeholder="Enter your Password"
-              onChange={(e) => setPassword(e.target.value)}
+              value={userDetails.password}
+              onChange={handleInputChange}
+              required
             />
             <span
               className="absolute inset-y-0 right-0 pr-5 flex items-center cursor-pointer font-medium text-blackH"
@@ -71,7 +98,10 @@ function SignupCard() {
           </div>
         </div>
         <div className="mb-4 flex items-center py-3">
-          <input type="checkbox" id="agree" className="mr-2 w-5 h-5 cursor-pointer" />
+          <input type="checkbox" name='agreed' id="agree" checked={userDetails.agreed}
+            onChange={handleInputChange}
+            required
+            className="mr-2 w-5 h-5 cursor-pointer" />
           <label htmlFor="agree" className="text-[14px] md:text-[16px] xl:text-[18px] font-normal text-blackH">
             I agree with <Link><span className='underline'>Terms of Use</span></Link> and <Link><span className='underline'>Privacy Policy</span></Link>
           </label>
