@@ -10,6 +10,7 @@ import Footer from './Components/Footer/Footer'; // Import Footer component
 import PricingPage from './Views/PricingPage';
 import Login from './Views/Login';
 import Signup from './Views/Signup';
+import Profile from "./Views/Profile"
 import CourseOpen from './Views/CourseOpen';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -30,6 +31,7 @@ function App() {
         <Route path='/Pricing' element={<PricingPage />} />
         <Route path='/Login' element={<Login />} />
         <Route path='/Signup' element={<Signup />} />
+        <Route path='/profile' element={<Profile />} />
       </Routes>
       <Footer />
       <ToastContainer />

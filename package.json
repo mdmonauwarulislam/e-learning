@@ -16,6 +16,7 @@
     "@heroicons/react": "^1.0.6",
     "axios": "^1.7.2",
     "gh": "^2.8.9",
+    "jwt-js-decode": "^1.9.0",
     "pages": "^0.0.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

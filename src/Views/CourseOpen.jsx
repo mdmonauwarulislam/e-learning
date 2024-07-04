@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import video from "../assets/Image/video.mp4";
 import OpenCourseCard from "../Components/OpenCourseCard";
 
-
 function CourseOpen() {
   const videoRef = useRef(null);
+  const [currentVideoUrl, setCurrentVideoUrl] = useState(video);
 
   const handlePlayPause = () => {
     const videoElement = videoRef.current;
@@ -26,16 +26,19 @@ function CourseOpen() {
           title: "Understanding UI/UX Design Principles",
           duration: "45 Minutes",
           lessonNumber: "Lesson 01",
+          videoUrl: "url_to_your_video_for_lesson_01",
         },
         {
           title: "Importance of User-Centered Design",
           duration: "1 Hour",
           lessonNumber: "Lesson 02",
+          videoUrl: "url_to_your_video_for_lesson_02",
         },
         {
           title: "The Role of UI/UX Design in Product Development",
           duration: "45 Minutes",
           lessonNumber: "Lesson 03",
+          videoUrl: "url_to_your_video_for_lesson_03",
         },
       ],
     },
@@ -47,42 +50,31 @@ function CourseOpen() {
           title: "Basic HTML Structure",
           duration: "30 Minutes",
           lessonNumber: "Lesson 01",
+          videoUrl: "url_to_your_video_for_lesson_04",
         },
         {
           title: "HTML Elements and Attributes",
           duration: "45 Minutes",
           lessonNumber: "Lesson 02",
+          videoUrl: "url_to_your_video_for_lesson_05",
         },
         {
           title: "Creating Forms in HTML",
           duration: "1 Hour",
           lessonNumber: "Lesson 03",
+          videoUrl: "url_to_your_video_for_lesson_06",
         },
       ],
     },
-    {
-      part: "02",
-      intro: "Introduction to HTML",
-      lessons: [
-        {
-          title: "Basic HTML Structure",
-          duration: "30 Minutes",
-          lessonNumber: "Lesson 01",
-        },
-        {
-          title: "HTML Elements and Attributes",
-          duration: "45 Minutes",
-          lessonNumber: "Lesson 02",
-        },
-        {
-          title: "Creating Forms in HTML",
-          duration: "1 Hour",
-          lessonNumber: "Lesson 03",
-        },
-      ],
-    },
+    // Add more courses as needed
   ];
 
+  const handleVideoClick = (videoUrl) => {
+    setCurrentVideoUrl(videoUrl);
+    const videoElement = videoRef.current;
+    videoElement.load(); // Ensures the new video source is loaded
+    videoElement.play();
+  };
 
   return (
     <div className="pt-16 bg-grayBg pb-4">
@@ -91,7 +83,7 @@ function CourseOpen() {
           <h3>UI/UX Design Course</h3>
         </div>
         <div className="md:w-1/2 text-[14px] md:text-[16px] xl:text-[18px] text-grayPara md:inline md:py-4 md:pl-4 mt-2 md:mt-0 text-justify">
-          Welcome to our UI/UX Design course! This comprehensive program will equip you with the knowledge and skills to create exceptional user interfaces (UI) and enhance user experiences (UX). Dive into the world of design thinking, wireframing, prototyping, and usability testing. Below is an overview of the curriculum
+          Welcome to our UI/UX Design course! This comprehensive program will equip you with the knowledge and skills to create exceptional user interfaces (UI) and enhance user experiences (UX). Dive into the world of design thinking, wireframing, prototyping, and usability testing. Below is an overview of the curriculum.
         </div>
       </div>
       <div className="border border-grayColor mx-auto max-w-[1450px] my-12"></div>
@@ -110,10 +102,10 @@ function CourseOpen() {
             <video
               ref={videoRef}
               width="100%"
-              controls="true"
+              controls={true}
               className="rounded"
             >
-              <source src={video} type="video/mp4" />
+              <source src={currentVideoUrl} type="video/mp4" />
             </video>
             <button onClick={handlePlayPause}></button>
           </div>
@@ -126,12 +118,12 @@ function CourseOpen() {
             part={course.part}
             intro={course.intro}
             lessons={course.lessons}
-
+            onVideoClick={handleVideoClick}
           />
         ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default CourseOpen
+export default CourseOpen;

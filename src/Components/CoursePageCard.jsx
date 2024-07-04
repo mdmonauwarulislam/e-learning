@@ -19,13 +19,13 @@ const CoursePageCard = ({ course }) => {
           </Link>
         </div>
       </div>
-      <div className="flex justify-between mt-6 gap-4">
+      <div className="flex justify-between mt-6 xl:gap-4 gap-2 overflow-hidden">
         {course.images.map((imgSrc, idx) => (
           <img
             key={idx}
             src={imgSrc}
             alt={`image-${idx}`}
-            className="md:h-80 h-24 md:w-96 w-24 rounded-lg border border-gray-300"
+            className="xl:h-64 lg:h-52 lg:w-72 md:h-40 md:w-52 h-fit xl:w-96 w-fit rounded-lg border border-gray-300"
           />
         ))}
       </div>
@@ -48,17 +48,17 @@ const CoursePageCard = ({ course }) => {
         <h2 className="text-[16px] md:text-[18px] xl:text-[22px] font-semibold py-4 px-6  border-b-2 border-grayColor text-grayH">
           Curriculum
         </h2>
-        <div className="md:flex justify-between mt-4 px-2 ">
+        <div className="lg:flex justify-betweem mt-4 px-2 ">
           {course.curriculum.map((item, idx) => (
-            <div key={item.id} className="gap-10 px-6 md:flex justify-between">
-              <div className="mb-4">
-                <h2 className="text-[30px] md:text-[40px] xl:text-[50px] font-extrabold text-grayH">
+            <div key={item.id} className="gap-8 px-6 lg:flex justify-between ">
+              <div className="mb-4 ">
+                <h2 className="text-[30px] md:text-[40px] xl:text-[50px] font-extrabold text-grayH ">
                   {item.id < 10 ? `0${item.id}` : item.id}
                 </h2>
                 <p className="text-[14px] md:text-[16px] xl:text-[18px] font-medium text-grayPara">{item.title}</p>
               </div>
               {idx < course.curriculum.length - 1 && (
-                <span className=" border-grayColor my-4 md:border-r-2 border-b-2" />
+                <span className=" border-grayColor mb-4 lg:border-r-2 border-b-2" />
               )}
             </div>
           ))}

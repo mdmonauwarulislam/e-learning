@@ -16,6 +16,7 @@ function SignupCard() {
     fullName: "",
     email: "",
     password: "",
+    agreed : false,
   })
 
   const handleInputChange = (e) => {
@@ -34,7 +35,7 @@ function SignupCard() {
     }
     try {
       const response = await axios.post("http://localhost:8000/signup", userDetails);
-      if (response.status === 201) {
+      if (response.status === 200) {
         toast.success("Registration Successful!");
       } else {
         toast.error("Registration failed! Please try again.");
