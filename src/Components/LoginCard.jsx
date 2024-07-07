@@ -2,7 +2,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 function LoginCard() {
@@ -16,6 +16,8 @@ function LoginCard() {
     password: "",
     agreed: false,
   });
+
+  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     const { name, type, checked, value } = e.target;
@@ -32,18 +34,18 @@ function LoginCard() {
       if (response.status === 200) {
         const token = response.data.data.token;
         localStorage.setItem("token", token);
-        console.log("Login successful and the user", response.data);
+        console.log("Login successful:", response.data);
         toast.success("Login Successfully!");
         setUserData({
           email: "",
           password: "",
           agreed: false,
         });
-        history.push('/profile'); 
+        navigate('/profile');
       }
     } catch (error) {
       toast.error("Login Failed!");
-      // console.log("Fail to log in", error);
+      console.log("Failed to log in:", error);
     }
   };
 

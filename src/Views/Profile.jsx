@@ -1,32 +1,40 @@
 import React, { useEffect, useState } from 'react';
 import { decode } from 'jwt-js-decode';
+import { useNavigate, Link } from "react-router-dom";
+
 
 function Profile() {
-  const [userDetails, setUserDetails] = useState({
-    fullName: '',
-    email: '',
-    courses: [],
-    purchasedCourses: [],
-  });
-
-  const handleUserDetails = () => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      const jwtDecode = decode(token);
-      setUserDetails({
-        fullName: jwtDecode.payload.user.fullName,
-        email: jwtDecode.payload.user.email,
-        courses: jwtDecode.payload.user.courses,
-        purchasedCourses: jwtDecode.payload.user.purchasedCourses,
-      });
-    }
-  };
+  const [userDetails, setUserDetails] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    handleUserDetails();
-  }, []);
+    const fetchUserDetails = () => {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        navigate('/login');
+        return;
+      }
 
-  if (!userDetails.fullName) return <div>Loading...</div>;
+      try {
+        const decodedToken = decode(token);
+        if (decodedToken && decodedToken.payload && decodedToken.payload.user) {
+          setUserDetails(decodedToken.payload.user);
+          console.log(decodedToken.payload.user);
+        } else {
+          localStorage.removeItem('token');
+          navigate('/profile');
+        }
+      } catch (error) {
+        console.error("Invalid token:", error);
+        localStorage.removeItem('token');
+        navigate('/login');
+      }
+    };
+
+    fetchUserDetails();
+  }, [navigate]);
+
+  if (!userDetails) return <div>Loading...</div>;
 
   return (
     <div className="pt-16 bg-gray-100 pb-4">
@@ -39,7 +47,7 @@ function Profile() {
           <span className="font-semibold">Email:</span> {userDetails.email}
         </p>
         <h2 className="text-2xl font-semibold text-gray-800 mb-4">My Courses</h2>
-        <ul className="list-disc list-inside">
+        {/* <ul className="list-disc list-inside">
           {userDetails.courses.map((course, index) => (
             <li key={index} className="text-gray-700 mb-2">{course.title}</li>
           ))}
@@ -49,7 +57,9 @@ function Profile() {
           {userDetails.purchasedCourses.map((course, index) => (
             <li key={index} className="text-gray-700 mb-2">{course.title}</li>
           ))}
-        </ul>
+        </ul> */}
+        <Link to = "/createcourse">
+        <button className='p-3 border-2 border-grayColor bg-white mt-10 '>Craete Course</button></Link>
       </div>
     </div>
   );
