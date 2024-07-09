@@ -1,13 +1,10 @@
 /* eslint-disable react/prop-types */
 
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 
 const CoursePageCard = ({course}) => {
-  useEffect(() => {
-    console.log(course);
-  },[])
+  
   return (
     <div className="max-w-[1280px] xl:mx-auto mx-4 bg-white mt-10 rounded-lg p-4 xl:p-8 border-2 border-grayColor font-be-vietnam-pro">
       <h3 className="text-[20px] xl:text-[24px] font-semibold mb-2 text-blackH leading-none ">{course.title}</h3>
