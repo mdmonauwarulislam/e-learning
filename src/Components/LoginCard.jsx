@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-
+import API from "../../env"
 function LoginCard() {
   const [showPassword, setShowPassword] = useState(false);
   const togglePasswordVisibility = () => {
@@ -30,7 +30,7 @@ function LoginCard() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8000/login", userData);
+      const response = await axios.post(`${API}/user/login`, userData);
       if (response.status === 200) {
         const token = response.data.data.token;
         localStorage.setItem("token", token);
@@ -68,7 +68,7 @@ function LoginCard() {
   };
 
   return (
-    <div className="bg-white p-10 rounded-lg font-be-vietnam-pro">
+    <div className="p-10 bg-white rounded-lg font-be-vietnam-pro">
       <h2 className="text-[28px] md:text-[38px] xl:text-[48px] font-semibold text-blackH text-center">Login</h2>
       <p className="text-[14px] md:text-[16px] xl:text-[16px] text-blackPara mb-6 text-center">
         Welcome back! Please log in to access your account.
@@ -79,7 +79,7 @@ function LoginCard() {
           <input
             type="email"
             name="email"
-            className="border-2 mt-2 border-grayColor rounded-md w-full py-4 px-4 outline-none text-blackPara hover:border-grayH hover:border-2"
+            className="w-full px-4 py-4 mt-2 border-2 rounded-md outline-none border-grayColor text-blackPara hover:border-grayH hover:border-2"
             placeholder="Enter your Email"
             value={userData.email}
             onChange={handleInputChange}
@@ -92,33 +92,33 @@ function LoginCard() {
             <input
               type={showPassword ? "text" : "password"}
               name="password"
-              className="border-2 mt-2 border-grayColor rounded-md w-full py-4 px-4 outline-none text-blackPara font-normal hover:border-grayH hover:border-2"
+              className="w-full px-4 py-4 mt-2 font-normal border-2 rounded-md outline-none border-grayColor text-blackPara hover:border-grayH hover:border-2"
               placeholder="Enter your Password"
               value={userData.password}
               onChange={handleInputChange}
               required
             />
             <span
-              className="absolute inset-y-0 right-0 pr-5 flex items-center cursor-pointer font-medium text-blackH"
+              className="absolute inset-y-0 right-0 flex items-center pr-5 font-medium cursor-pointer text-blackH"
               onClick={togglePasswordVisibility}
             >
               {showPassword ? <AiFillEyeInvisible size={20} /> : <AiFillEye size={20} />}
             </span>
           </div>
-          <div className="text-right mt-2">
+          <div className="mt-2 text-right">
             <button type="button" onClick={handleForgotPassword} className="text-[14px] md:text-[16px] xl:text-[18px] text-indigo-500 hover:underline">
               Forgot Password?
             </button>
           </div>
         </div>
-        <div className="mb-4 flex items-center py-2">
+        <div className="flex items-center py-2 mb-4">
           <input
             type="checkbox"
             id="remember"
             name="agreed"
             checked={userData.agreed}
             onChange={handleInputChange}
-            className="mr-2 h-5 w-5 cursor-pointer"
+            className="w-5 h-5 mr-2 cursor-pointer"
           />
           <label htmlFor="remember" className="text-[14px] md:text-[16px] xl:text-[18px] font-normal text-blackH">
             Remember Me
@@ -139,7 +139,7 @@ function LoginCard() {
       <button
         className="w-full text-[14px] md:text-[16px] xl:text-[18px] font-medium text-blackH bg-grayBg hover:bg-orangeBg duration-500 outline-none py-3 px-3 rounded-md hover:text-white border-2 hover:border-none border-grayColor flex items-center justify-center"
       >
-        <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google Logo" className="mr-2 h-8 w-8" />
+        <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google Logo" className="w-8 h-8 mr-2" />
         Login with Google
       </button>
       <p className="mt-6 text-center text-[14px] md:text-[16px] xl:text-[18px] text-blackPara">

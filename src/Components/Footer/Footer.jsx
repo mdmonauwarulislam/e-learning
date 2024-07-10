@@ -9,20 +9,20 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="bg-gray-white py-12 px-4 md:px-8 lg:px-20 font-be-vietnam-pro">
-      <div className="container mx-auto flex flex-col lg:flex-row justify-between ">
-        <div className=" md:items-center lg:mb-0 mb-8 text-grayH">
-          <img src={logo} alt="Logo" className="h-10 w-10 mb-4 md:mb-0" />
+    <footer className="px-4 py-12 border-t-2 border-grayColor bg-gray-white md:px-8 lg:px-20 font-be-vietnam-pro">
+      <div className="container flex flex-col justify-between mx-auto lg:flex-row ">
+        <div className="mb-8 md:items-center lg:mb-0 text-grayH">
+          <img src={logo} alt="Logo" className="w-10 h-10 mb-4 md:mb-0" />
           <div className="mt-5 space-y-3 text-center md:text-left text-[14px] md:text-[16px] xl:text-[18px]">
-            <div className="flex space-x-2 items-center">
+            <div className="flex items-center space-x-2">
               <TbMailFilled className="text-[24px] " />
               <p>mdmonauwarulislam@gmail.com</p>
             </div>
-            <div className=" flex space-x-2 items-center">
+            <div className="flex items-center space-x-2 ">
               <BsFillTelephoneFill className="text-[24px] " />
               <p>+916200791544</p>
             </div>
-            <div className="flex space-x-2 items-center">
+            <div className="flex items-center space-x-2">
               <FaLocationDot className="text-[24px]" />
               <p>Hyderabad</p>
             </div>

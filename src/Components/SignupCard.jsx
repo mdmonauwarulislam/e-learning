@@ -4,6 +4,7 @@ import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { toast } from 'react-toastify';
+import API from "../../env"
 
 
 function SignupCard() {
@@ -34,7 +35,7 @@ function SignupCard() {
       return;
     }
     try {
-      const response = await axios.post("http://localhost:8000/signup", userDetails);
+      const response = await axios.post(`${API}/user/signup`, userDetails);
       if (response.status === 200) {
         toast.success("Registration Successful!");
       } else {
@@ -48,7 +49,7 @@ function SignupCard() {
 
 
   return (
-    <div className="bg-white p-10 rounded-lg font-be-vietnam-pro ">
+    <div className="p-10 bg-white rounded-lg font-be-vietnam-pro ">
       <h2 className="text-[28px] md:text-[38px] xl:text-[48px] font-semibold text-blackH  text-center">Sign Up</h2>
       <p className="text-[14px] md:text-[16px] xl:text-[18px] text-blackPara mb-6 text-center">
         Create an account to unlock exclusive features.
@@ -59,7 +60,7 @@ function SignupCard() {
           <input
             type="name"
             name="fullName"
-            className="border-2 mt-2 border-grayColor rounded-md w-full py-4 px-4 outline-none text-blackPara   hover:border-grayH hover:border-2"
+            className="w-full px-4 py-4 mt-2 border-2 rounded-md outline-none border-grayColor text-blackPara hover:border-grayH hover:border-2"
             placeholder="Enter your Name"
             value={userDetails.fullName}
             onChange={handleInputChange}
@@ -71,7 +72,7 @@ function SignupCard() {
           <input
             type="email"
             name="email"
-            className="border-2 mt-2 border-grayColor rounded-md w-full py-4 px-4 outline-none text-blackPara   hover:border-grayH hover:border-2"
+            className="w-full px-4 py-4 mt-2 border-2 rounded-md outline-none border-grayColor text-blackPara hover:border-grayH hover:border-2"
             placeholder="Enter your Email"
             value={userDetails.email}
             onChange={handleInputChange}
@@ -84,25 +85,25 @@ function SignupCard() {
             <input
               type={showPassword ? "text" : "password"}
               name='password'
-              className="border-2 mt-2 border-grayColor rounded-md w-full py-4 px-4 outline-none text-blackPara   hover:border-grayH hover:border-2"
+              className="w-full px-4 py-4 mt-2 border-2 rounded-md outline-none border-grayColor text-blackPara hover:border-grayH hover:border-2"
               placeholder="Enter your Password"
               value={userDetails.password}
               onChange={handleInputChange}
               required
             />
             <span
-              className="absolute inset-y-0 right-0 pr-5 flex items-center cursor-pointer font-medium text-blackH"
+              className="absolute inset-y-0 right-0 flex items-center pr-5 font-medium cursor-pointer text-blackH"
               onClick={togglePasswordVisibility}
             >
               {showPassword ? <AiFillEyeInvisible size={20} /> : <AiFillEye size={20} />}
             </span>
           </div>
         </div>
-        <div className="mb-4 flex items-center py-3">
+        <div className="flex items-center py-3 mb-4">
           <input type="checkbox" name='agreed' id="agree" checked={userDetails.agreed}
             onChange={handleInputChange}
             required
-            className="mr-2 w-5 h-5 cursor-pointer" />
+            className="w-5 h-5 mr-2 cursor-pointer" />
           <label htmlFor="agree" className="text-[14px] md:text-[16px] xl:text-[18px] font-normal text-blackH">
             I agree with <Link><span className='underline'>Terms of Use</span></Link> and <Link><span className='underline'>Privacy Policy</span></Link>
           </label>
@@ -119,7 +120,7 @@ function SignupCard() {
         <img
           src="https://img.icons8.com/color/16/000000/google-logo.png"
           alt="Google Logo"
-          className="mr-2 h-8 w-8"
+          className="w-8 h-8 mr-2"
         />
         Signup with Google
       </button>
