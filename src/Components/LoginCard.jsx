@@ -4,13 +4,10 @@ import { useState } from 'react';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import API from "../../env"
+import API from "../../env";
+
 function LoginCard() {
   const [showPassword, setShowPassword] = useState(false);
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  };
-
   const [userData, setUserData] = useState({
     email: "",
     password: "",
@@ -18,6 +15,8 @@ function LoginCard() {
   });
 
   const navigate = useNavigate();
+
+  const togglePasswordVisibility = () => setShowPassword(!showPassword);
 
   const handleInputChange = (e) => {
     const { name, type, checked, value } = e.target;
@@ -29,12 +28,12 @@ function LoginCard() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
       const response = await axios.post(`${API}/user/login`, userData);
       if (response.status === 200) {
         const token = response.data.data.token;
         localStorage.setItem("token", token);
-        console.log("Login successful:", response.data);
         toast.success("Login Successfully!");
         setUserData({
           email: "",
@@ -44,8 +43,9 @@ function LoginCard() {
         navigate('/profile');
       }
     } catch (error) {
-      toast.error("Login Failed!");
-      console.log("Failed to log in:", error);
+      const errorMessage = error.response?.data?.message || "Login Failed!";
+      toast.error(errorMessage);
+      console.error("Failed to log in:", error);
     }
   };
 
@@ -55,7 +55,7 @@ function LoginCard() {
       return;
     }
     try {
-      const response = await axios.post("http://localhost:8000/forgot-password", { email: userData.email });
+      const response = await axios.post(`${API}/forgot-password`, { email: userData.email });
       if (response.status === 200) {
         toast.success("Password reset link sent to your email!");
       } else {
@@ -63,7 +63,7 @@ function LoginCard() {
       }
     } catch (error) {
       toast.error("Error sending password reset link.");
-      console.log("Error in forgot password:", error);
+      console.error("Error in forgot password:", error);
     }
   };
 
@@ -74,43 +74,37 @@ function LoginCard() {
         Welcome back! Please log in to access your account.
       </p>
       <form onSubmit={handleSubmit}>
-        <div className="mb-4 text-[14px] md:text-[16px] xl:text-[18px]">
-          <label className="font-medium text-blackH">Email</label>
-          <input
-            type="email"
-            name="email"
-            className="w-full px-4 py-4 mt-2 border-2 rounded-md outline-none border-grayColor text-blackPara hover:border-grayH hover:border-2"
-            placeholder="Enter your Email"
-            value={userData.email}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-        <div className="mb-4 text-[14px] md:text-[16px] xl:text-[18px]">
-          <label className="font-medium text-blackH">Password</label>
-          <div className="relative">
-            <input
-              type={showPassword ? "text" : "password"}
-              name="password"
-              className="w-full px-4 py-4 mt-2 font-normal border-2 rounded-md outline-none border-grayColor text-blackPara hover:border-grayH hover:border-2"
-              placeholder="Enter your Password"
-              value={userData.password}
-              onChange={handleInputChange}
-              required
-            />
-            <span
-              className="absolute inset-y-0 right-0 flex items-center pr-5 font-medium cursor-pointer text-blackH"
-              onClick={togglePasswordVisibility}
-            >
-              {showPassword ? <AiFillEyeInvisible size={20} /> : <AiFillEye size={20} />}
-            </span>
+        {['email', 'password'].map((field, index) => (
+          <div key={index} className="mb-4 text-[14px] md:text-[16px] xl:text-[18px]">
+            <label className="font-medium text-blackH">{field.charAt(0).toUpperCase() + field.slice(1)}</label>
+            <div className={field === 'password' ? 'relative' : ''}>
+              <input
+                type={field === 'password' ? (showPassword ? 'text' : 'password') : 'email'}
+                name={field}
+                className="w-full px-4 py-4 mt-2 border-2 rounded-md outline-none border-grayColor text-blackPara hover:border-grayH"
+                placeholder={`Enter your ${field.charAt(0).toUpperCase() + field.slice(1)}`}
+                value={userData[field]}
+                onChange={handleInputChange}
+                required
+              />
+              {field === 'password' && (
+                <span
+                  className="absolute inset-y-0 right-0 flex items-center pr-5 font-medium cursor-pointer text-blackH"
+                  onClick={togglePasswordVisibility}
+                >
+                  {showPassword ? <AiFillEyeInvisible size={20} /> : <AiFillEye size={20} />}
+                </span>
+              )}
+            </div>
+            {field === 'password' && (
+              <div className="mt-2 text-right">
+                <button type="button" onClick={handleForgotPassword} className="text-[14px] md:text-[16px] xl:text-[18px] text-indigo-500 hover:underline">
+                  Forgot Password?
+                </button>
+              </div>
+            )}
           </div>
-          <div className="mt-2 text-right">
-            <button type="button" onClick={handleForgotPassword} className="text-[14px] md:text-[16px] xl:text-[18px] text-indigo-500 hover:underline">
-              Forgot Password?
-            </button>
-          </div>
-        </div>
+        ))}
         <div className="flex items-center py-2 mb-4">
           <input
             type="checkbox"

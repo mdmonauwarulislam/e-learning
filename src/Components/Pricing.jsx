@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
+import { HiMiniCheck, HiMiniXMark } from "react-icons/hi2";
 
 function Pricing({ title, price, period, features, updatePlan }) {
   const [isEditing, setIsEditing] = useState(false);
@@ -74,7 +75,7 @@ function Pricing({ title, price, period, features, updatePlan }) {
           <ul>
             {features.map((feature, index) => (
               <li key={index}>
-                {feature.isCross ? "✔️" : "❌"} {feature.contents}
+                {feature.isCross ?  <HiMiniCheck/> : <HiMiniXMark/>} {feature.contents}
               </li>
             ))}
           </ul>

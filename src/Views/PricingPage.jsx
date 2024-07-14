@@ -3,11 +3,12 @@ import  { useEffect, useState } from 'react';
 import axios from 'axios';
 import FAQ from "../Components/FAQ";
 import Pricing from "../Components/Pricing";
-import AdminLogin from '../components/AdminLogin';
+import AdminLogin from '../Components/LoginCard';
 
 function PricingPage() {
   const [pricing, setPricing] = useState([]);
   const [token, setToken] = useState(localStorage.getItem('token') || null);
+  const [selectedPeriod, setSelectedPeriod] = useState('monthly');
 
   useEffect(() => {
     const fetchPricing = async () => {
@@ -33,6 +34,10 @@ function PricingPage() {
     }
   };
 
+  const handlePeriodChange = (period) => {
+    setSelectedPeriod(period);
+  };
+
   return (
     <div className="pt-16 pb-4 bg-grayBg font-be-vietnam-pro">
       {!token ? (
@@ -49,10 +54,16 @@ function PricingPage() {
           </div>
           <div className="flex justify-center">
             <div className="flex gap-4 p-3 mt-4 mb-5 bg-white rounded md:mt-0 justify-evenly font-be-vietnam-pro">
-              <button className="w-auto p-3 bg-white border-2 rounded hover:bg-orangeBg text-grayH hover:text-white border-grayColor">
+              <button 
+                className={` p-3 rounded hover:bg-orangeBg text-grayH hover:text-white border-2 border-grayColor  w-auto ${selectedPeriod === 'monthly' ? 'bg-orangeBg text-white' : ''}`} 
+                onClick={() => handlePeriodChange('monthly')}
+              >
                 Monthly
               </button>
-              <button className="w-auto p-3 bg-white border-2 rounded hover:bg-orangeBg text-grayH hover:text-white border-grayColor">
+              <button 
+                className={` p-3 rounded hover:bg-orangeBg text-grayH hover:text-white border-2 border-grayColor  w-auto ${selectedPeriod === 'yearly' ? 'bg-orangeBg text-white' : ''}`} 
+                onClick={() => handlePeriodChange('yearly')}
+              >
                 Yearly
               </button>
             </div>
@@ -60,15 +71,17 @@ function PricingPage() {
 
           <div className="flex flex-col pt-5 bg-grayBg max-w-[1280px] xl:mx-auto mx-4 ">
             <div className="px-4 py-6 pt-5 mb-10 bg-white md:px-2 xl:px-20 lg md:flex rounded-xl">
-              {pricing.map((item, index) => (
-                <Pricing
-                  key={index}
-                  title={item.title}
-                  price={item.price}
-                  period={item.period}
-                  features={item.features}
-                  updatePlan={updatePlan}
-                />
+              {pricing
+                .filter(plan => plan.period.includes(selectedPeriod))
+                .map((item, index) => (
+                  <Pricing
+                    key={index}
+                    title={item.title}
+                    price={item.price}
+                    period={item.period}
+                    features={item.features}
+                    updatePlan={updatePlan}
+                  />
               ))}
             </div>
           </div>

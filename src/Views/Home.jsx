@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { HiBolt } from "react-icons/hi2";
 import brandContainer from "../assets/Image/Container.png";
 import video from "../assets/Image/video.mp4";
@@ -7,6 +7,8 @@ import CourseCard from "../Components/CourseCard";
 import Testinmonial from "../Components/Testinmonial";
 import Pricing from "../Components/Pricing";
 import FAQ from "../Components/FAQ";
+import axios from "axios";
+import API from "../../env"
 
 function Home() {
   const videoRef = useRef(null);
@@ -48,36 +50,22 @@ function Home() {
     },
   ];
 
-  const courseCard = [
-    {
-      tag1: "DSA",
-      tag2: "Learning",
-      author: "Mannu",
-      title: "Flexing Learning Schedule",
-      disc: "Fit your coursework around yout existing commitements and obligations",
-    },
-    {
-      tag1: "DSA",
-      tag2: "Learning",
-      author: "Mannu",
-      title: "Flexing Learning Schedule",
-      disc: "Fit your coursework around yout existing commitements and obligations",
-    },
-    {
-      tag1: "DSA",
-      tag2: "Learning",
-      author: "Mannu",
-      title: "Flexing Learning Schedule",
-      disc: "Fit your coursework around yout existing commitements and obligations",
-    },
-    {
-      tag1: "DSA",
-      tag2: "Learning",
-      author: "Mannu",
-      title: "Flexing Learning Schedule",
-      disc: "Fit your coursework around yout existing commitements and obligations",
-    },
-  ];
+  const [courses, setCourses] = useState([]);
+ const handleViewCourse = async () =>{
+  try {
+    const response = await axios.get(`${API}/view-course-list`);
+    if(response.status === 200){
+      setCourses(response.data.data)
+    }
+  } catch (error) {
+    console.log("cousrse not showing",error)
+    
+  }
+ }
+
+ useEffect(() =>{
+  handleViewCourse()
+ },[])
 
   const testimonial = [
     {
@@ -290,14 +278,10 @@ function Home() {
           <div
             className={`md:grid md:grid-cols-2 gap-4 md:pt-12 pt-3 space-y-4 md:space-y-0 `}
           >
-            {courseCard.map((item, index) => (
+            {courses.map((item, index) => (
               <CourseCard
                 key={index}
-                tag1={item.tag1}
-                tag2={item.tag2}
-                author={item.author}
-                title={item.title}
-                disc={item.disc}
+                course = {item}
               />
             ))}
           </div>
