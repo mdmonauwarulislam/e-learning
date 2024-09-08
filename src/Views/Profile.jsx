@@ -63,6 +63,11 @@ function Profile() {
             <button className='p-3 mt-10 bg-white border-2 rounded-md border-grayColor'>Create Course</button>
           </Link>
         )}
+        {/* {userDetails.role === 'user' && ( */}
+          <Link to="/submitTestimonial">
+            <button className='p-3 mt-10 bg-white border-2 rounded-md border-grayColor'>Submit Review</button>
+          </Link>
+        {/* )} */}
       </div>
     </div>
   );

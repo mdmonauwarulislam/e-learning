@@ -45,8 +45,7 @@ const CoursePageCard = ({course}) => {
         
         </div>
         <p className="md:text-right ml-1 mt-2 md:mt-0 md:ml-0 text-[16px] xl:text-[20px] font-medium text-blackH">
-          {/* {course.author} */}
-          Hibban
+      {course.fullName}
         </p>
       </div>
       <div className="border-2 border-grayColor mt-4  rounded-lg">

@@ -15,6 +15,7 @@ import CourseOpen from './Views/CourseOpen';
 import CreateCourse from './Views/CreateCourse';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SubmitTestimonial from './Components/SubmitTestimonial';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <Route path='/Signup' element={<Signup />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/createcourse' element={<CreateCourse />} />
+        <Route path='/submitTestimonial' element={<SubmitTestimonial />} />
       </Routes>
       <Footer />
       <ToastContainer />
