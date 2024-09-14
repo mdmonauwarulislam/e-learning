@@ -30,7 +30,7 @@ function CourseCard({course}) {
       <div className="mt-[24px]">
         <h3 className="text-[20px] xl:text-[24px] font-semibold mb-2 text-blackH leading-none ">{course.title}</h3>
         <p className="text-[14px] md:text[16px] xl:text-[18px] font-normal text-blackPara mb-[24px] xl:mb-[30px]">{truncateText(course.description, maxLength)}</p>
-        <Link to = "/CourseOpen">
+        <Link to = {`/CourseOpen/${course._id}`}>
         <button className="w-full bg-grayBg border-2 outline-none border-grayColor hover:bg-orangeBg text-blackH hover:text-white py-3 rounded-md text-[14px] xl:text-[18px]">
           Get it Now
         </button>

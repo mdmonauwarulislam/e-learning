@@ -1,14 +1,13 @@
 import { useState } from 'react';
 import axios from 'axios';
-import API from "../../env"
+import API from "../../env";
 
 const CourseForm = () => {
-  
   const [formData, setFormData] = useState({
     title: '',
     description: '',
-    weekDuration:'',
-    courseLevel :'',
+    weekDuration: '',
+    courseLevel: '',
     subCourse: [{
       part: '',
       title: '',
@@ -109,17 +108,14 @@ const CourseForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
     try {
-      // Send formData to backend API using Axios
       const response = await axios.post(`${API}/course`, formData, {
-        headers:{
-          Authorization:localStorage.getItem("token")
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`
         }
       });
       console.log('Course created:', response.data);
 
-      // Reset form after successful submission
       setFormData({
         title: '',
         description: '',
@@ -137,11 +133,8 @@ const CourseForm = () => {
         }],
         createdBy: '',
       });
-
-      // Handle success notification or redirection
     } catch (error) {
       console.error('Error creating course:', error);
-      // Handle error notification or user feedback
     }
   };
 
@@ -160,17 +153,18 @@ const CourseForm = () => {
           <label htmlFor="description" className="block text-sm font-medium text-gray-700">Description</label>
           <textarea id="description" name="description" value={formData.description} onChange={handleChange} required rows="3" className="block w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm resize-none focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
         </div>
-        {/* weekduration */}
+
+        {/* Week Duration */}
         <div className="mb-4">
-          <label htmlFor="weekDuartion" className="block text-sm font-medium text-gray-700">Week Duartion</label>
+          <label htmlFor="weekDuration" className="block text-sm font-medium text-gray-700">Week Duration</label>
           <input type="text" id="weekDuration" name="weekDuration" value={formData.weekDuration} onChange={handleChange} required className="block w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
         </div>
-        {/* courseLevel */}
+
+        {/* Course Level */}
         <div className="mb-4">
           <label htmlFor="courseLevel" className="block text-sm font-medium text-gray-700">Course Level</label>
           <input type="text" id="courseLevel" name="courseLevel" value={formData.courseLevel} onChange={handleChange} required className="block w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
         </div>
-
 
         {/* Sub Courses */}
         {formData.subCourse.map((subCourse, index) => (
@@ -199,41 +193,23 @@ const CourseForm = () => {
                     <input type="text" id={`lessonNumber_${index}_${lessonIndex}`} name="lessonNumber" value={lesson.lessonNumber} onChange={(e) => handleLessonChange(index, lessonIndex, e)} required className="block w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
                   </div>
                   <div className="mb-2">
-                    <label htmlFor={`lessonDuration_${index}_${lessonIndex}`} className="block text-sm font-medium text-gray-700">Lesson Duration</label>
-                    <input type="text" id={`lessonDuration_${index}_${lessonIndex}`} name="lessonDuration" value={lesson.lessonDuration} onChange={(e) => handleLessonChange(index, lessonIndex, e)} required className="block w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+                    <label htmlFor={`lessonDuration_${index}_${lessonIndex}`} className="block text-sm font-medium text-gray-700">Lesson Duration (in minutes)</label>
+                    <input type="number" id={`lessonDuration_${index}_${lessonIndex}`} name="lessonDuration" value={lesson.lessonDuration} onChange={(e) => handleLessonChange(index, lessonIndex, e)} required className="block w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
                   </div>
                   <div className="mb-2">
                     <label htmlFor={`lessonVideoUrl_${index}_${lessonIndex}`} className="block text-sm font-medium text-gray-700">Lesson Video URL</label>
                     <input type="text" id={`lessonVideoUrl_${index}_${lessonIndex}`} name="lessonVideoUrl" value={lesson.lessonVideoUrl} onChange={(e) => handleLessonChange(index, lessonIndex, e)} required className="block w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
                   </div>
-                  <div className="flex items-center">
-                    <button type="button" className="text-red-600 hover:text-red-800 focus:outline-none" onClick={() => deleteCourseLesson(index, lessonIndex)}>Delete Lesson</button>
-                  </div>
                 </div>
+                <button type="button" onClick={() => deleteCourseLesson(index, lessonIndex)} className="text-red-500 hover:text-red-700 mt-2">Remove Lesson</button>
               </div>
             ))}
-
-            {/* Add Course Lesson Button */}
-            <div className="mb-4">
-              <button type="button" className="px-4 py-2 text-white transition-colors bg-blue-500 rounded-md hover:bg-blue-600" onClick={() => addCourseLesson(index)}>Add Lesson</button>
-            </div>
-
-            {/* Delete Sub Course Button */}
-            <div className="flex items-center">
-              <button type="button" className="text-red-600 hover:text-red-800 focus:outline-none" onClick={() => deleteSubCourse(index)}>Delete Sub Course</button>
-            </div>
+            <button type="button" onClick={() => addCourseLesson(index)} className="text-blue-500 hover:text-blue-700 mt-2">Add Lesson</button>
+            <button type="button" onClick={() => deleteSubCourse(index)} className="text-red-500 hover:text-red-700 mt-2">Remove Sub Course</button>
           </div>
         ))}
-
-        {/* Add Sub Course Button */}
-        <div className="mb-4">
-          <button type="button" className="px-4 py-2 text-white transition-colors bg-blue-500 rounded-md hover:bg-blue-600" onClick={addSubCourse}>Add Sub Course</button>
-        </div>
-
-        {/* Submit Button */}
-        <div className="mt-6">
-          <button type="submit" className="px-4 py-2 text-white transition-colors bg-green-500 rounded-md hover:bg-green-600">Create Course</button>
-        </div>
+        <button type="button" onClick={addSubCourse} className="text-blue-500 hover:text-blue-700 mb-4">Add Sub Course</button>
+        <button type="submit" className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Submit</button>
       </form>
     </div>
   );

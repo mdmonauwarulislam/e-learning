@@ -1,28 +1,28 @@
 import { useEffect, useState } from "react";
-import CoursePageCard from "../Components/CoursePageCard";
-// import learningImage from "../assets/Image/learning.jpg";
+
 import axios from "axios";
 import API from "../../env"
+import CourseCard from "../Components/CourseCard";
 
 function Course() {
- const [courses, setCourses] = useState([]);
- const handleViewCourse = async () =>{
-  try {
-    const response = await axios.get(`${API}/view-course-list`);
-    if(response.status === 200){
-      setCourses(response.data.data)
-    }
-  } catch (error) {
-    console.log("cousrse not showing",error)
-    
-  }
- }
+  const [courses, setCourses] = useState([]);
+  const handleViewCourse = async () => {
+    try {
+      const response = await axios.get(`${API}/view-course-list`);
+      if (response.status === 200) {
+        setCourses(response.data.data)
+      }
+    } catch (error) {
+      console.log("cousrse not showing", error)
 
- useEffect(() =>{
-  handleViewCourse()
- },[])
+    }
+  }
+
+  useEffect(() => {
+    handleViewCourse()
+  }, [])
   return (
-    <div className="pt-16 bg-grayBg pb-4 font-be-vietnam-pro ">
+    <div className="pt-16 bg-grayBg pb-4 font-be-vietnam-pro">
       <div className="md:flex justify-between items-center max-w-[1280px] xl:mx-auto mx-4 pb-12">
         <div className="md:w-1/2 text-[28px] md:text-[38px] xl:text-[48px] font-semibold md:pr-4 text-grayH">
           <h3>
@@ -34,12 +34,15 @@ function Course() {
         </div>
       </div>
       <div className="border border-gray-200 mx-auto max-w-[1450px]"></div>
-      <div >
-        <div className="gap-8">
-          {courses.map((course, index) => (
-            <CoursePageCard key={index} course={course} />
-          ))}
-        </div>
+      <div
+        className={`md:grid md:grid-cols-2 gap-4 md:pt-12 pt-3 space-y-4 md:space-y-0 max-w-[1280px] xl:mx-auto mx-4`}
+      >
+        {courses.map((item, index) => (
+          <CourseCard
+            key={index}
+            course={item}
+          />
+        ))}
       </div>
     </div>
   );
